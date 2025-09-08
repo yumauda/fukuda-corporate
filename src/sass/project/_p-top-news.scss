@@ -2,11 +2,13 @@
 
 .p-top-news {
   background: #ebebeb;
+  padding-bottom: rem(133);
 }
 
 .p-top-news__content {
   padding-top: rem(100);
   padding-bottom: rem(100);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.05));
   background: #fff;
   @include mq(md) {
     display: flex;
