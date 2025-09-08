@@ -4,7 +4,8 @@
 // インナー幅設定
 ////////////////////
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1400px;
+$inner: 1750px;
+$inner-md: 1200px;
 // ※キャンパス幅ではなくインナーの幅を指す
 
 // 余白
@@ -16,9 +17,12 @@ $padding-sp: 30px;
 // フォント設定
 ////////////////////
 
-$base-font-family: "Noto Sans JP", sans-serif;
-$second-font-family: "Noto Serif JP", serif;
-$urbanist: "Urbanist", sans-serif;
+$base-font-family: "Source Han Sans JP", sans-serif;
+$second-font-family: "Source Han Sans JP", sans-serif;
+$lato: "lato", sans-serif;
+$lato-italic: "lato-italic", sans-serif;
+$outfit: "outfit", sans-serif;
+
 
 // ※検証ツールでしっかり反映されているか確認する
 
