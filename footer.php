@@ -19,7 +19,7 @@
         <div class="p-footer__content">
             <div class="p-footer__left">
                 <div class="p-footer__logo">
-                    <a href="#" class="p-footer__home">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="p-footer__home">
                         <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/footer_logo.png" alt="株式会社フクダ" width="350" height="67">
                     </a>
                 </div>
@@ -47,16 +47,16 @@
                         <ul class="p-footer__sub-lists">
 
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">土木事業</a>
+                                <a href="<?php echo esc_url(home_url('/civil')); ?>" class="p-footer__sub-link">土木事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">建築事業</a>
+                                <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-footer__sub-link">建築事業</a>
                             </li>
                             <li class="p-footer__sub-list">
                                 <a href="#" class="p-footer__sub-link">アグリ事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">ソーラー発電事業</a>
+                                <a href="<?php echo esc_url(home_url('/solar')); ?>" class="p-footer__sub-link">ソーラー発電事業</a>
                             </li>
                             <li class="p-footer__sub-list">
                                 <a href="#" class="p-footer__sub-link">不動産事業</a>
