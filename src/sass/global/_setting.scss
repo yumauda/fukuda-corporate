@@ -23,7 +23,6 @@ $lato: "lato", sans-serif;
 $lato-italic: "lato-italic", sans-serif;
 $outfit: "outfit", sans-serif;
 
-
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -98,4 +97,7 @@ $mediaquerys: (
 }
 body.drawer-open {
   overflow: hidden;
+}
+body {
+  -webkit-text-size-adjust: 100%;
 }
