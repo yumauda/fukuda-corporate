@@ -1,0 +1,151 @@
+@use "global" as *;
+
+.p-header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.p-header.is-active {
+  background: #fff;
+  height: rem(80);
+}
+.p-header__inner {
+  padding-right: rem(20);
+}
+
+.p-header__content {
+  display: flex;
+}
+
+.p-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-header__home {
+  width: rem(150);
+  display: inline-block;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+  transition: 0.3s ease-in-out;
+}
+.p-header.is-active .p-header__home {
+  width: rem(80);
+  filter: initial;
+}
+.p-header__home img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-header__nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  background: #fff;
+  border-radius: 9999px;
+  padding-left: rem(50);
+  height: rem(70);
+  padding-right: rem(16);
+  margin-top: rem(20);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+  transition: 0.3s ease-in-out;
+}
+.p-header.is-active .p-header__nav {
+  height: rem(80);
+  filter: initial;
+  margin-top: initial;
+  padding-right: initial;
+}
+.p-header__lists {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+}
+
+.p-header__list {
+}
+
+.p-header__link {
+}
+
+.p-header__link-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #242424;
+  font-weight: 700;
+  font-size: rem(16);
+  letter-spacing: 0.05em;
+}
+
+.p-header__btn-wrapper {
+  display: flex;
+  margin-left: rem(30);
+  align-items: center;
+  gap: 2px;
+}
+
+.p-header__recruit-btn {
+  background: #00a040;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  padding-left: rem(30);
+  padding-top: rem(13);
+  padding-bottom: rem(13);
+  padding-right: rem(25);
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.p-header__recruit-icon {
+  width: rem(18);
+}
+.p-header__recruit-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-header__contact-btn {
+  background: #00a040;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  padding-left: rem(30);
+  padding-top: rem(13);
+  padding-bottom: rem(13);
+  padding-right: rem(25);
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.p-header__contact-icon {
+  width: rem(22);
+}
+.p-header__contact-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-header__btn-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: rem(16);
+  letter-spacing: 0.05em;
+}
+
+.p-header__drawer {
+  margin-left: auto;
+}

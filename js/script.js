@@ -14,6 +14,16 @@ jQuery(function ($) {
       topBtn.fadeOut();
     }
   });
+  // ヘッダーの背景色変更処理
+  $(window).on("scroll", function () {
+    const scrollPosition = $(window).scrollTop();
+    
+    if (scrollPosition > 300) {  // 300px以上スクロールしたら
+      $(".p-header").addClass("is-active");
+    } else {
+      $(".p-header").removeClass("is-active");
+    }
+  });
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
