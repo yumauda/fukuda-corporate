@@ -1,0 +1,330 @@
+@use "global" as *;
+
+.p-kind {
+  padding-bottom: rem(200);
+}
+
+.p-kind__content {
+  max-width: rem(1400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-kind__title {
+  text-align: center;
+}
+
+.p-kind__lists {
+  margin-top: rem(90);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.p-kind__list {
+  height: 100%;
+}
+
+.p-kind__link {
+  display: block;
+  padding: rem(85) rem(48);
+  background: transparent;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  height: 100%;
+}
+
+.p-kind__link::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgba(0, 160, 64, 1),
+    rgba(0, 160, 64, 0)
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.p-kind__link:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.p-kind__link::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link--3::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link--4::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link--5::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link--6::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link--2::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+.p-kind__link:hover::after,
+.p-kind__link--4:hover::after,
+.p-kind__link--5:hover::after,
+.p-kind__link--6:hover::after,
+.p-kind__link--3:hover::after,
+.p-kind__link--2:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.p-number__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-kind__number {
+  position: relative;
+  z-index: 2;
+}
+
+.p-kind__number-en {
+  font-family: $outfit;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: rem(12);
+  letter-spacing: 0.05em;
+  color: #00a040;
+  transition: 0.3s ease-in-out;
+}
+
+.p-kind__number-num {
+  font-family: $outfit;
+  font-weight: 700;
+  font-size: rem(52);
+  font-weight: 700;
+  color: #00a040;
+  transition: 0.3s ease-in-out;
+}
+
+.p-kind__img {
+  max-width: rem(240);
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.p-kind__link:hover .p-kind__img {
+  opacity: 0;
+  visibility: hidden;
+}
+.p-kind__img img {
+  border-radius: rem(5);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-kind__detail {
+  position: relative;
+  z-index: 2;
+}
+
+.p-kind__detail-title {
+  color: #242424;
+  font-size: rem(26);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: 0.3s ease-in-out;
+}
+
+.p-kind__detail-text {
+  margin-top: rem(10);
+  font-size: rem(16);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: calc(30 / 16);
+  color: #242424;
+  transition: 0.3s ease-in-out;
+}
+
+.p-kind__link:hover .p-kind__number-num,
+.p-kind__link:hover .p-kind__number-en,
+.p-kind__link:hover .p-kind__detail-title,
+.p-kind__link:hover .p-kind__detail-text {
+  color: $white;
+}
+.p-kind__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: rem(20);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+.p-kind__link:hover .p-kind__btn-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+.p-kind__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(10);
+  transition: 0.3s ease-in-out;
+  width: rem(210);
+  border: 1px solid #fff;
+  height: rem(50);
+  border-radius: 9999px;
+  padding-left: rem(30);
+  padding-right: rem(30);
+}
+
+.p-kind__btn-text {
+  font-size: rem(16);
+  color: #fff;
+  font-weight: 400;
+}
+
+.p-kind__btn-icon {
+  width: rem(15);
+}
+.p-kind__btn-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.p-kind__bottom-btnWrapper {
+  margin-top: rem(80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-kind__bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(347);
+  height: rem(86);
+  padding-left: rem(50);
+  padding-right: rem(50);
+  background: #00A040;
+  border-radius: 9999px;
+}
+
+.p-kind__bottom-btn-text {
+  color: #fff;
+  font-size: rem(22);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.p-kind__bottom-btn-icon {
+  width: rem(46);
+}
+.p-kind__bottom-btn-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}

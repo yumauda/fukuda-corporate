@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.p-page-mv {
+  padding-top: rem(145);
+  padding-bottom: rem(45);
+}
+
+.p-page-mv__content {
+  max-width: rem(1550);
+  width: 100%;
+  margin-left: auto;
+}
+
+.p-page-mv__detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.p-page-mv__title {
+}
+
+.p-page-mv__lists {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  margin-left: auto;
+}
+
+.p-page-mv__list {
+}
+
+.p-page-mv__link {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+}
+
+.p-page-mv__link-text {
+  font-size: rem(20);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: #242424;
+}
+
+.p-page-mv__icon {
+  width: rem(30);
+}
+.p-page-mv__icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}

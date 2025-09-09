@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.c-small-title {
+  color: #00a040;
+  font-size: rem(34);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+.c-small-title::before {
+  position: absolute;
+  content: "";
+  background: #00A040;
+  width: rem(20);
+  height: 3px;
+  bottom: rem(-16);
+  left: 50%;
+  transform: translateX(-50%);
+}
