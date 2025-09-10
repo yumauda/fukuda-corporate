@@ -9,6 +9,9 @@
   display: inline-block;
   position: relative;
 }
+.c-small-title--white {
+  color: #fff;
+}
 .c-small-title::before {
   position: absolute;
   content: "";
@@ -18,4 +21,7 @@
   bottom: rem(-16);
   left: 50%;
   transform: translateX(-50%);
+}
+.c-small-title--white::before {
+  background: #fff;
 }
