@@ -43,6 +43,11 @@ function my_script_init()
 		wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js', array(), null, true);
 		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/swiper.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
 	}
+	if (is_page('estate')) {
+		wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/swiper-bundle.min.css', array(), filemtime(get_theme_file_path('/css/swiper-bundle.min.css')), 'all');
+		wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js', array(), null, true);
+		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/swiper.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
+	}
 
 	if (is_front_page()) {
 		wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', '', "1.0.1", true);

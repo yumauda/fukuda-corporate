@@ -17,3 +17,23 @@ let swiper = new Swiper(".swiper1", {
     },
   },
 });
+
+let thumbSwiper = new Swiper(".thumbSwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+let mainSwiper = new Swiper(".mainSwiper", {
+  spaceBetween: 10,
+  loop: true,
+  effect: "fade",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: thumbSwiper,
+  },
+});
