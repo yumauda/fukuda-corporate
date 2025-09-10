@@ -1,73 +1,79 @@
 <?php get_header(); ?>
 <main>
-  <div class="p-scroll-text wrapper js-scroll-text p-mv__scroll-text">
-    <div class="loop">
-      <img src="<?php echo get_template_directory_uri() ?>/images/common/loop4.svg" alt="" width="3006" height="160">
-    </div>
-    <div class="loop loop2">
-      <img src="<?php echo get_template_directory_uri() ?>/images/common/loop4.svg" alt="" width="3006" height="160">
-    </div>
-  </div>
+  <section class="p-page-mv">
+    <div class="l-inner">
+      <div class="p-page-mv__content">
+        <div class="p-page-mv__detail">
+          <div class="p-page-mv__title">
+            <h1 class="c-main-title">
+              <span class="c-main-title__en">News</span>
+              <span class="c-main-title__ja">お知らせ</span>
+            </h1>
+          </div>
 
-  <div class="p-home-topics__box">
-
-    <section class="p-home-topics">
-      <div class="l-inner">
-        <div class="p-home-topics__content">
-          <div class="p-home-topics__title">
-            <h2 class="c-main-title">
-              <span class="c-main-title__ja">トピックス</span>
-              <span class="c-main-title__en">Topics</span>
-            </h2>
-          </div>
-          <div class="p-home-topics__block">
-            <?php if (have_posts()) : ?>
-              <?php while (have_posts()) : ?>
-                <?php the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="p-home-topics__row">
-                  <div class="p-home-topics__metaBlock">
-                    <time datetime="<?php the_time('Y-m-d'); ?>" class="p-home-topics__time"><?php the_time('Y.m.d'); ?></time>
-                    <p class="p-home-topics__category">
-                      <?php
-                      $categories = get_the_category();
-                      if (! empty($categories)) {
-                        $cat_names = array_map(function ($cat) {
-                          return esc_html($cat->name);
-                        }, $categories);
-                        echo implode(', ', $cat_names);
-                      }
-                      ?>
-                    </p>
-                  </div>
-                  <p class="p-home-topics__blockTitle"><?php the_title(); ?></p>
-                </a>
-              <?php endwhile; ?>
-            <?php endif; ?>
-          </div>
-          <div class="p-home-topics__pagination">
-            <?php
-            $pagination_links = paginate_links(array(
-              'type'      => 'array',
-              'prev_text' => '&lt;',
-              'next_text' => '&gt;',
-              'end_size'  => 1,
-              'mid_size'  => 2,
-              'before_page_number' => '',
-              'after_page_number'  => '',
-            ));
-            if ($pagination_links) : ?>
-              <ul class="p-home-topics__lists">
-                <?php foreach ($pagination_links as $link) : ?>
-                  <li class="p-home-topics__list">
-                    <?php echo str_replace('page-numbers', 'p-home-topics__pagination-link', $link); ?>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            <?php endif; ?>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <section class="p-page-mvImg">
+    <div class="l-inner">
+      <figure class="p-page-mvImg__img">
+        <img src="<?php echo get_template_directory_uri() ?>/images/common/mv_news.png" alt="お知らせ" width="1700" height="500">
+      </figure>
+    </div>
+  </section>
+  <div class="p-news">
+    <div class="l-inner">
+      <div class="p-news__content">
+        <ul class="p-news__lists">
+          <li class="p-news__list">
+            <a href="#" class="p-news__link">
+              <div class="p-news__link-left">
+                <div class="p-news__meta">
+                  <span class="p-news__category">TOPICS</span>
+                  <time datetime="2025.00.00" class="p-news__time">2025.00.00</time>
+                </div>
+                <p class="p-news__title">
+                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
+                </p>
+              </div>
+              <div class="p-news__link-right">
+                <img src="<?php echo get_template_directory_uri() ?>/images/common/news_link_arrow.png" alt="" width="46" height="46">
+              </div>
+            </a>
+          </li>
+          <li class="p-news__list">
+            <a href="#" class="p-news__link">
+              <div class="p-news__link-left">
+                <div class="p-news__meta">
+                  <span class="p-news__category">認定登録一覧</span>
+                  <time datetime="2025.00.00" class="p-news__time">2025.00.00</time>
+                </div>
+                <p class="p-news__title">
+                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
+                </p>
+              </div>
+              <div class="p-news__link-right">
+                <img src="<?php echo get_template_directory_uri() ?>/images/common/news_link_arrow.png" alt="" width="46" height="46">
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-news__pagination">
+          <a href="#" class="p-news__pagination-link">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_prev.png" alt="" width="24" height="24">
+          </a>
+          <a href="#" class="p-news__pagination-link current">1</a>
+          <a href="#" class="p-news__pagination-link">2</a>
+          <a href="#" class="p-news__pagination-link">3</a>
+          <a href="#" class="p-news__pagination-link">4</a>
+          <a href="#" class="p-news__pagination-link">5</a>
+          <a href="#" class="p-news__pagination-link">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_next.png" alt="" width="24" height="24">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
 

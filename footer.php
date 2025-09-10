@@ -101,12 +101,12 @@
                         </ul>
                     </li>
                     <li class="p-footer__list">
-                        <a href="#" class="p-footer__link">お知らせ</a>
+                        <a href="<?php echo esc_url(home_url('/news')); ?>" class="p-footer__link">お知らせ</a>
                         <a href="#" class="p-footer__link">採用情報</a>
                         <a href="#" class="p-footer__link">お問い合わせ</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">個人情報保護方針</a>
+                                <a href="<?php echo esc_url(home_url('/privacy')); ?>" class="p-footer__sub-link">個人情報保護方針</a>
                             </li>
                         </ul>
                     </li>
