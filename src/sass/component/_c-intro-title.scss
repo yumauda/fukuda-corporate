@@ -28,10 +28,32 @@
   left: 0;
   transform: translateY(-50%);
 }
+.c-intro-title__en--white {
+  color: #fff;
+  position: relative;
+}
+.c-intro-title__en--white::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/intro_title_icon_white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(15);
+  height: auto;
+  aspect-ratio: 15 / 10;
+  object-fit: cover;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
 .c-intro-title__ja {
   display: block;
   color: #00a040;
   font-size: rem(50);
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+.c-intro-title__ja--white {
+  color: #fff;
 }

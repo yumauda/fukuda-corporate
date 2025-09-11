@@ -25,39 +25,37 @@
   <div class="p-news">
     <div class="l-inner">
       <div class="p-news__content">
+
         <ul class="p-news__lists">
-          <li class="p-news__list">
-            <a href="#" class="p-news__link">
-              <div class="p-news__link-left">
-                <div class="p-news__meta">
-                  <span class="p-news__category">TOPICS</span>
-                  <time datetime="2025.00.00" class="p-news__time">2025.00.00</time>
-                </div>
-                <p class="p-news__title">
-                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
-              <div class="p-news__link-right">
-                <img src="<?php echo get_template_directory_uri() ?>/images/common/news_link_arrow.png" alt="" width="46" height="46">
-              </div>
-            </a>
-          </li>
-          <li class="p-news__list">
-            <a href="#" class="p-news__link">
-              <div class="p-news__link-left">
-                <div class="p-news__meta">
-                  <span class="p-news__category">認定登録一覧</span>
-                  <time datetime="2025.00.00" class="p-news__time">2025.00.00</time>
-                </div>
-                <p class="p-news__title">
-                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
-              <div class="p-news__link-right">
-                <img src="<?php echo get_template_directory_uri() ?>/images/common/news_link_arrow.png" alt="" width="46" height="46">
-              </div>
-            </a>
-          </li>
+          <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : ?>
+              <?php the_post(); ?>
+              <li class="p-news__list">
+                <a href="<?php the_permalink(); ?>" class="p-news__link">
+                  <div class="p-news__link-left">
+                    <div class="p-news__meta">
+                      <?php
+                      $categories = get_the_category();
+                      if (! empty($categories)) {
+                        $cat_names = array_map(function ($cat) {
+                          return esc_html($cat->name);
+                        }, $categories);
+                        echo '<span class="p-single-topics__meta-category">' . implode(', ', $cat_names) . '</span>';
+                      }
+                      ?>
+                      <time datetime="<?php the_time('Y.m.d'); ?>" class="p-news__time"><?php the_time('Y.m.d'); ?></time>
+                    </div>
+                    <p class="p-news__title">
+                      <?php the_title(); ?>
+                    </p>
+                  </div>
+                  <div class="p-news__link-right">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/common/news_link_arrow.png" alt="" width="46" height="46">
+                  </div>
+                </a>
+              </li>
+            <?php endwhile; ?>
+          <?php endif; ?>
         </ul>
         <div class="p-news__pagination">
           <a href="#" class="p-news__pagination-link">

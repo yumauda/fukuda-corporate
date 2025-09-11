@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.p-cycle {
+  padding-top: rem(180);
+  padding-bottom: rem(250);
+}
+
+.p-cycle__content {
+  max-width: rem(1400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-cycle__text-wrapper {
+  margin-top: rem(50);
+  text-align: center;
+}
+
+.p-cycle__text {
+  color: #fff;
+  font-weight: 700;
+  font-size: rem(26);
+  letter-spacing: 0.05em;
+}
+
+.p-cycle__img {
+  margin-top: rem(50);
+}
+.p-cycle__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
