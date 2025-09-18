@@ -1,0 +1,124 @@
+@use "global" as *;
+
+.p-modal {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.7);
+  backdrop-filter: blur(16px);
+  visibility: hidden;
+  transition: 0.3s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-modal.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.p-modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: rem(940);
+  height: 75vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: rem(30);
+  padding-top: rem(63);
+  padding-bottom: rem(80);
+  padding-left: rem(66);
+  padding-right: rem(66);
+}
+
+.p-modal__close {
+  width: rem(70);
+  position: absolute;
+  top: rem(-32);
+  right: rem(-32);
+  cursor: pointer;
+}
+.p-modal__close img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-modal__slider {
+  padding-left: rem(32);
+  padding-right: rem(32);
+  margin-top: rem(30);
+}
+.p-modal__title {
+  font-size: rem(22);
+  font-weight: 700;
+  color: #242424;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.p-modal__tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  margin-top: rem(10);
+}
+.p-modal__tag {
+  font-size: rem(12);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #242424;
+  padding: rem(5) rem(15);
+  border: 1px solid #b8b8b8;
+  border-radius: 9999px;
+}
+.p-modal__block {
+  overflow-y: auto;
+}
+.p-modal__dl {
+  margin-top: rem(30);
+  width: 100%;
+}
+
+.p-modal__row {
+  display: flex;
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  border-top: 1px solid #d6d6d6;
+}
+.p-modal__row:last-child {
+  border-bottom: 1px solid #d6d6d6;
+}
+.p-modal__dt {
+  font-size: rem(16);
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #242424;
+  line-height: calc(30 / 16);
+  @include mq(md) {
+    width: rem(250);
+  }
+}
+
+.p-modal__dd {
+  font-size: rem(16);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: calc(30 / 16);
+  color: #242424;
+  text-align: left;
+  @include mq(md) {
+    width: calc(100% - rem(250));
+  }
+}

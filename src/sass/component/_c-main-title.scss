@@ -33,3 +33,14 @@
 .c-main-title__en--white {
   color: #fff;
 }
+.c-main-title__ja--sub {
+  color: #00a040;
+  font-size: rem(40);
+  font-weight: 700;
+  margin-top: rem(48);
+}
+.c-main-title__row {
+  display: flex;
+  gap: rem(32);
+  align-items: center;
+}

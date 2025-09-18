@@ -256,13 +256,13 @@ jQuery(".p-modal__close").on("click", function (e) {
   jQuery(".p-modal").removeClass("is-active");
   return false;
 });
-jQuery(".js-view").on("click", function (e) {
+jQuery(".js-modal-btn-bottom").on("click", function (e) {
   e.preventDefault();
-  jQuery(".p-digital-modal").toggleClass("is-active");
+  jQuery(".p-modal--bottom").toggleClass("is-active");
   return false;
 });
-jQuery(".p-digital-modal__close").on("click", function (e) {
+jQuery(".p-modal__close--bottom").on("click", function (e) {
   e.preventDefault();
-  jQuery(".p-digital-modal").removeClass("is-active");
+  jQuery(".p-modal--bottom").removeClass("is-active");
   return false;
 });

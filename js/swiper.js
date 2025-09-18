@@ -13,10 +13,11 @@ let swiper = new Swiper(".swiper1", {
   breakpoints: {
     768: {
       slidesPerView: 3.3,
-      spaceBetween: 30
+      spaceBetween: 30,
     },
   },
 });
+
 
 let thumbSwiper = new Swiper(".thumbSwiper", {
   spaceBetween: 10,

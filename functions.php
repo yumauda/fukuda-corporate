@@ -48,6 +48,11 @@ function my_script_init()
 		wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js', array(), null, true);
 		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/swiper.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
 	}
+	if (is_post_type_archive('engineer')) {
+		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
+		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
+		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
+	}
 
 	if (is_front_page()) {
 		wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', '', "1.0.1", true);
@@ -351,11 +356,11 @@ function custom_hiragana_validation_filter($result, $tag)
 
 //投稿タイプの作成(カスタム投稿)
 register_post_type(
-	'allcolumn',
+	'engineer',
 	array(
 		'labels' => array(
-			'name' => __('コラム'),
-			'singular_name' => __('コラム')
+			'name' => __('土木事業'),
+			'singular_name' => __('土木事業')
 		),
 		'supports' => array(
 			'title',
@@ -372,13 +377,48 @@ register_post_type(
 		'show_in_rest' => true,
 	)
 );
-register_taxonomy('allcolumn_category', array('allcolumn'), array(
+register_taxonomy('engineer_category', array('engineer'), array(
 	'hierarchical' => true,
 	'label' => 'カテゴリー',
 	'show_ui' => true,
 	'public' => true
 ));
-register_taxonomy('allcolumn_tag', 'allcolumn', array(
+register_taxonomy('engineer_tag', 'engineer', array(
+	'hierarchical' => false,
+	'label' => 'タグ',
+	'show_ui' => true,
+	'public' => true,
+	'show_in_rest' => true,
+));
+register_post_type(
+	'architecture',
+	array(
+		'labels' => array(
+			'name' => __('建築事業'),
+			'singular_name' => __('建築事業')
+		),
+		'supports' => array(
+			'title',
+			'editor',
+			'author',
+			'thumbnail',
+			'excerpt',
+			'custom-fields',
+			'comments',
+			'categories'
+		),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+	)
+);
+register_taxonomy('architecture_category', array('architecture'), array(
+	'hierarchical' => true,
+	'label' => 'カテゴリー',
+	'show_ui' => true,
+	'public' => true
+));
+register_taxonomy('architecture_tag', 'architecture', array(
 	'hierarchical' => false,
 	'label' => 'タグ',
 	'show_ui' => true,
