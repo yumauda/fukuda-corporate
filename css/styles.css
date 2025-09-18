@@ -2642,6 +2642,119 @@ input::placeholder {
      object-position: center center;
 }
 
+.p-message {
+  padding-top: 100px;
+  padding-top: 6.25rem;
+  padding-bottom: 170px;
+  padding-bottom: 10.625rem;
+  overflow-x: clip;
+}
+
+.p-message__content {
+  max-width: 1400px;
+  max-width: 87.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
+  gap: 1.75rem;
+}
+
+.p-message__detail {
+  max-width: 700px;
+  max-width: 43.75rem;
+  width: 100%;
+}
+
+.p-message__title {
+  color: #242424;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.p-message__title::before {
+  position: absolute;
+  content: "Message";
+  font-size: 120px;
+  font-size: 7.5rem;
+  font-weight: 500;
+  font-family: "lato", sans-serif;
+  top: -120px;
+  top: -7.5rem;
+  left: 0;
+  color: rgba(0, 160, 64, .1);
+  z-index: -1;
+}
+
+.p-message__text-wrapper {
+  margin-top: 30px;
+  margin-top: 1.875rem;
+}
+
+.p-message__text {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #242424;
+  line-height: 2.125;
+  letter-spacing: 0.05em;
+}
+
+.p-message__name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+  gap: 0.625rem;
+  margin-top: 60px;
+  margin-top: 3.75rem;
+}
+
+.p-message__occupation {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #242424;
+}
+
+.p-message__name {
+  font-size: reem(22);
+  font-weight: 700;
+  color: #242424;
+  letter-spacing: 0.05em;
+}
+
+.p-message__img {
+  margin-right: calc(50% - 50vw);
+  width: 50vw;
+  margin-left: auto;
+}
+
+.p-message__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
 .p-nature__content {
   max-width: 1400px;
   max-width: 87.5rem;
@@ -2955,6 +3068,225 @@ input::placeholder {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.p-philosophy {
+  padding-bottom: 200px;
+  padding-bottom: 12.5rem;
+}
+
+.p-philosophy__content {
+  position: relative;
+  padding-top: 100px;
+  padding-top: 6.25rem;
+}
+
+.p-philosophy__content::before {
+  position: absolute;
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(#302a28), to(#00a040));
+  background: linear-gradient(to bottom, #302a28 0%, #00a040 100%);
+  aspect-ratio: 1700/1393;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  border-top-left-radius: 200px;
+  border-top-left-radius: 12.5rem;
+  border-bottom-right-radius: 200px;
+  border-bottom-right-radius: 12.5rem;
+  top: 0;
+}
+
+.p-philosophy__title {
+  width: 476px;
+  width: 29.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-philosophy__title img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.p-philosophy__block {
+  margin-top: 50px;
+  margin-top: 3.125rem;
+  padding-top: 50px;
+  padding-top: 3.125rem;
+  position: relative;
+}
+
+.p-philosophy__block::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 140px;
+  width: 8.75rem;
+  height: 1px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.p-philosophy__text-wrapper {
+  text-align: center;
+}
+
+.p-philosophy__text {
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  line-height: 1.8888888889;
+  font-weight: 400;
+}
+
+.p-philosophy__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 120px;
+  margin-top: 7.5rem;
+  padding-top: 120px;
+  padding-top: 7.5rem;
+  position: relative;
+}
+
+.p-philosophy__row::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/philosophy_line.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1400/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-philosophy__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+  gap: 3rem;
+}
+
+.p-philosophy__left-title {
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+
+.p-philosophy__left-title::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/philosophy_logo1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 90/65;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90px;
+  width: 5.625rem;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.p-philosophy__left-text {
+  text-align: center;
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.p-philosophy__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+  gap: 3rem;
+}
+
+.p-philosophy__right-title {
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+
+.p-philosophy__right-title::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/philosophy_logo2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 90/65;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90px;
+  width: 5.625rem;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.p-philosophy__right-text {
+  text-align: center;
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-weight: 400;
 }
 
 .p-privacy {

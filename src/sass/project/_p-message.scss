@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.p-message {
+  padding-top: rem(100);
+  padding-bottom: rem(170);
+  overflow-x: clip;
+}
+
+.p-message__content {
+  max-width: rem(1400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: rem(28);
+}
+
+.p-message__detail {
+  max-width: rem(700);
+  width: 100%;
+}
+
+.p-message__title {
+  color: #242424;
+  font-size: rem(26);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+.p-message__title::before {
+  position: absolute;
+  content: "Message";
+  font-size: rem(120);
+  font-weight: 500;
+  font-family: $lato;
+  top: rem(-120);
+  left: 0;
+  color: rgba($color: #00A040, $alpha: 0.1);
+  z-index: -1;
+}
+
+.p-message__text-wrapper {
+  margin-top: rem(30);
+}
+
+.p-message__text {
+  font-size: rem(16);
+  font-weight: 400;
+  color: #242424;
+  line-height: calc(34 / 16);
+  letter-spacing: 0.05em;
+}
+
+.p-message__name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: rem(10);
+  margin-top: rem(60);
+}
+
+.p-message__occupation {
+  font-size: rem(14);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #242424;
+}
+
+.p-message__name {
+  font-size: reem(22);
+  font-weight: 700;
+  color: #242424;
+  letter-spacing: 0.05em;
+}
+
+.p-message__img {
+  margin-right: calc(50% - 50vw);
+  width: 50vw;
+  margin-left: auto;
+}
+.p-message__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
