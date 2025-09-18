@@ -16,7 +16,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.p-archive__title {
+.p-archive__main-title {
   text-align: center;
 }
 .p-archive__lists {
@@ -39,6 +39,7 @@
   transition: 0.3s ease-in-out;
   background: transparent;
   border-radius: rem(20);
+  height: 100%;
 }
 .p-archive--green .p-archive__link {
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.15));
@@ -47,6 +48,12 @@
   background: #fff;
 }
 .p-archive__img {
+}
+.p-archive__img img {
+  aspect-ratio: 420 / 280;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .p-archive__detail {

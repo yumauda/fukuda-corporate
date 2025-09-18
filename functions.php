@@ -381,7 +381,8 @@ register_taxonomy('engineer_category', array('engineer'), array(
 	'hierarchical' => true,
 	'label' => 'カテゴリー',
 	'show_ui' => true,
-	'public' => true
+	'public' => true,
+	'show_in_rest' => true
 ));
 register_taxonomy('engineer_tag', 'engineer', array(
 	'hierarchical' => false,
@@ -416,6 +417,7 @@ register_taxonomy('architecture_category', array('architecture'), array(
 	'hierarchical' => true,
 	'label' => 'カテゴリー',
 	'show_ui' => true,
+	'show_in_rest' => true,
 	'public' => true
 ));
 register_taxonomy('architecture_tag', 'architecture', array(

@@ -1,6 +1,13 @@
 @use "global" as *;
 
 .p-splide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: 0.3s;
+}
+.p-modal.is-active .p-splide {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .p-splide__img img {

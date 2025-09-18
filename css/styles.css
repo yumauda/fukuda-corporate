@@ -501,7 +501,7 @@ select::-ms-expand {
   margin-right: auto;
 }
 
-.p-archive__title {
+.p-archive__main-title {
   text-align: center;
 }
 
@@ -531,6 +531,7 @@ select::-ms-expand {
   transition: 0.3s ease-in-out;
   background: transparent;
   border-radius: 1.25rem;
+  height: 100%;
 }
 
 .p-archive--green .p-archive__link {
@@ -541,6 +542,14 @@ select::-ms-expand {
 
 .p-archive--green .p-archive__link {
   background: #fff;
+}
+
+.p-archive__img img {
+  aspect-ratio: 420/280;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .p-archive__detail {
@@ -4530,6 +4539,18 @@ input::placeholder {
 /* グループ（グループ化ブロック） */
 /* カラム系 */
 /* ギャラリー */
+.p-splide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.p-modal.is-active .p-splide {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 .p-splide__img img {
   aspect-ratio: 750/500;
   -o-object-fit: cover;

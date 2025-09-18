@@ -17,8 +17,9 @@ jQuery(function ($) {
   // ヘッダーの背景色変更処理
   $(window).on("scroll", function () {
     const scrollPosition = $(window).scrollTop();
-    
-    if (scrollPosition > 300) {  // 300px以上スクロールしたら
+
+    if (scrollPosition > 300) {
+      // 300px以上スクロールしたら
       $(".p-header").addClass("is-active");
     } else {
       $(".p-header").removeClass("is-active");
@@ -246,7 +247,7 @@ jQuery(document).ready(function ($) {
     }
   });
 });
-jQuery(".js-modal-btn").on("click", function (e) {
+/* jQuery(".js-modal-btn").on("click", function (e) {
   e.preventDefault();
   jQuery(".p-modal").toggleClass("is-active");
   return false;
@@ -255,14 +256,71 @@ jQuery(".p-modal__close").on("click", function (e) {
   e.preventDefault();
   jQuery(".p-modal").removeClass("is-active");
   return false;
-});
-jQuery(".js-modal-btn-bottom").on("click", function (e) {
+}); */
+
+// スクロールロック（任意）
+document.documentElement.classList.remove("u-modal-open");
+
+// 開く
+jQuery(document).on("click", ".js-modal-btn", function (e) {
   e.preventDefault();
-  jQuery(".p-modal--bottom").toggleClass("is-active");
+
+  var id =
+    jQuery(this).data("modal-id") ||
+    (jQuery(this).attr("href") || "").replace("#", "");
+  if (!id) return;
+
+  var $modal = jQuery("#" + id);
+  if (!$modal.length) return;
+
+  $modal.addClass("is-active").attr("aria-hidden", "false");
+  document.documentElement.classList.add("u-modal-open");
+
+  // モーダル内の Splide を初回だけ mount（あれば）
+  var $splide = $modal.find(".splide");
+  if ($splide.length && typeof Splide !== "undefined") {
+    $splide.each(function () {
+      if (this.__mounted) return;
+      new Splide(this, {
+        type: "loop",
+        perPage: 1,
+        gap: 16,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        arrows: true,
+        pagination: true,
+      }).mount();
+      this.__mounted = true;
+    });
+  }
+
   return false;
 });
-jQuery(".p-modal__close--bottom").on("click", function (e) {
+
+// 閉じる（×）
+jQuery(document).on("click", ".js-modal-close", function (e) {
   e.preventDefault();
-  jQuery(".p-modal--bottom").removeClass("is-active");
+  var $modal = jQuery(this).closest(".p-modal");
+  $modal.removeClass("is-active").attr("aria-hidden", "true");
+  document.documentElement.classList.remove("u-modal-open");
   return false;
+});
+
+// モーダルの外側クリックで閉じる
+jQuery(document).on("click", ".p-modal", function (e) {
+  if (jQuery(e.target).closest(".p-modal__content").length) return; // 中身クリックは無視
+  jQuery(this).removeClass("is-active").attr("aria-hidden", "true");
+  document.documentElement.classList.remove("u-modal-open");
+});
+
+// ESCで閉じる
+jQuery(document).on("keydown", function (e) {
+  if (e.key === "Escape") {
+    var $open = jQuery(".p-modal.is-active");
+    if ($open.length) {
+      $open.removeClass("is-active").attr("aria-hidden", "true");
+      document.documentElement.classList.remove("u-modal-open");
+    }
+  }
 });
