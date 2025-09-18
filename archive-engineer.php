@@ -198,7 +198,6 @@
                 </a>
               </li>
 
-              <!-- ▼この投稿専用のモーダル（同一ループ内・IDは$mid） -->
               <section class="p-modal" id="<?php echo esc_attr($mid); ?>" aria-hidden="true" role="dialog" aria-modal="true">
                 <div class="l-inner">
                   <div class="p-modal__content" role="document">
@@ -259,8 +258,6 @@
                   </div>
                 </div>
               </section>
-              <!-- ▲モーダルここまで -->
-
           <?php endwhile;
           endif; ?>
         </ul>
