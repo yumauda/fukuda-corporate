@@ -15,6 +15,27 @@
       </div>
     </div>
   </section>
+  <section class="p-year">
+    <div class="l-inner">
+      <div class="p-year__content">
+        <div class="p-year__detail">
+          <h2 class="p-year__title">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_title.png" alt="100年先に想いを乗せて" width="380" height="130">
+          </h2>
+          <div class="p-year__text-wrapper">
+            <p class="p-year__text">まちとともに、生きる。<br>
+              土を耕し、道をつなぎ、暮らしを支える。<br>
+              それは、土地の鼓動を感じ、呼吸を合わせること。<br>
+              そして、いつか訪れる未来に、今の想いをそっと渡していく。<br>
+              100年先のまちが、「ここにあってよかった」と思えるように。</p>
+          </div>
+        </div>
+        <figure class="p-year__img">
+          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_img.png" alt="" width="910" height="997">
+        </figure>
+      </div>
+    </div>
+  </section>
   <section class="p-top-works">
     <div class="l-inner">
       <div class="p-top-works__content">
@@ -25,38 +46,10 @@
           </h2>
         </div>
         <div class="p-top-works__slider-wrapper">
-          <div class="p-top-works__slider">
-            <!-- Slider main container -->
-            <div class="swiper swiper1">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
-                </div>
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-            </div>
+          <div class="p-top-works__slider-link">
+            <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-top-works__slider-page">
+              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/works_engineer_link.png" alt="" width="360" height="360">
+            </a>
           </div>
           <div class="p-top-works__slider">
             <!-- Slider main container -->
@@ -65,19 +58,103 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <figure class="p-top-works__img">
-                    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                  </figure>
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="p-top-works__pagers">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="p-top-works__pagers-buttons">
+                  <div class="swiper-button-prev">
+                    <div class="p-top-works__button-icon">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/prev.png" alt="" width="15" height="12">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <div class="p-top-works__button-icon">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/next.png" alt="" width="15" height="12">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="p-top-works__slider-wrapper">
+          <div class="p-top-works__slider-link">
+            <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-top-works__slider-page">
+              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/works_architecture_link.png" alt="" width="360" height="360">
+            </a>
+          </div>
+          <div class="p-top-works__slider">
+            <!-- Slider main container -->
+            <div class="swiper swiper1">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-top-works__detail">
+                    <figure class="p-top-works__img">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
+                    </figure>
+                    <div class="p-top-works__detail-textWrapper">
+                      <p class="p-top-works__detail-text">道路</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- If we need pagination -->
@@ -95,6 +172,82 @@
       </div>
     </div>
   </section>
+  <figure class="p-detail-img">
+    <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/detail_bg.png" alt="" width="1920" height="1080">
+  </figure>
+  <section class="p-detail">
+    <div class="l-inner">
+      <div class="p-detail__content">
+        <div class="p-detail__detail">
+          <figure class="p-detail__detail-img">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/detail_img.png" alt="" width="470" height="700">
+          </figure>
+          <div class="p-detail__block">
+            <div class="p-detail__subTitle-wrapper">
+              <p class="p-detail__subTitle">Company</p>
+              <p class="p-detail__subTitle-ja">会社概要</p>
+            </div>
+            <h2 class="p-detail__title">地域とともに。<br>信頼の基礎にまごころを重ねて。</h2>
+            <div class="p-detail__text-wrapper">
+              <p class="p-detail__text">1954年の創業以来、地元に根ざした建設業として地域とともに歩み、まちの基盤を築いてきました。<br>
+                個々の成長が組織の信頼と品質を生み、地域への真の貢献につながると信じ、お客様・地域の皆様に寄り添いながら、技術と誠意で豊かな郷土づくりに貢献してまいります。</p>
+            </div>
+            <div class="p-detail__btn-wrapper">
+              <a href="#" class="p-detail__btn">
+                <p class="p-detail__btn-text">さらに詳しく</p>
+                <div class="p-detail__icon">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/btn_icon_arrow.png" alt="" width="15" height="12">
+                </div>
+              </a>
+            </div>
+            <div class="p-detail__shape">
+              <a href="#" class="p-detail__link">
+                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/detail_intro.png" alt="" width="600" height="200">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-us">
+    <div class="l-inner">
+      <div class="p-us__content">
+        <a href="" class="p-us__link">
+          <div class="p-us__detail">
+            <div class="p-us__left">
+              <div class="p-us__block">
+                <h2 class="p-us__title">私たちの取り組み</h2>
+                <p class="p-us__text">「まちの一員」としてできることを、誠実に、まじめに、続けていく。<br>
+                  私たちの取り組みのひとつひとつが、未来のまちを支える力になると信じています。</p>
+              </div>
+              <div class="p-us__icon">
+                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/us_icon.png" alt="" width="100" height="100">
+              </div>
+            </div>
+            <figure class="p-us__img">
+              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/us_img.png" alt="" width="470" height="327">
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="p-recruit">
+    <div class="l-inner">
+      <div class="p-recruit__content">
+        <figure class="p-recruit__bg">
+          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/recruit_bg.png" alt="採用特設サイト" width="1920" height="750">
+        </figure>
+        <div class="p-recruit__detail">
+          <h2 class="p-recruit__title">採用特設サイト</h2>
+          <div class="p-recruit__btn-wrapper">
+            <a href="#" class="p-recruit__btn">一緒に町を作ってみる？</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="p-top-news">
     <div class="l-inner">
       <div class="p-top-news__content">
@@ -106,10 +259,10 @@
             </h2>
           </div>
           <div class="p-top-news__btn-wrapper">
-            <a href="#" class="p-top-new__btn">
+            <a href="<?php echo esc_url(home_url('/news')); ?>" class="p-top-new__btn">
               <p class="p-top-new__btn-text">さらに詳しく</p>
               <div class="p-top-new__btn-arrow">
-                
+
                 <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/btn_icon.png" alt="" width="431" height="38">
               </div>
             </a>

@@ -1,5 +1,5 @@
 "use strict";
-
+const pad2 = n => String(n).padStart(2, '0');
 let swiper = new Swiper(".swiper1", {
   loop: true,
   centeredSlides: false,
@@ -15,6 +15,32 @@ let swiper = new Swiper(".swiper1", {
       slidesPerView: 3.3,
       spaceBetween: 30,
     },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // 分数（01/06）
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+    renderFraction: (currentClass, totalClass) => (
+      `<span class="pag-current ${currentClass}"></span>` +
+      `<span class="pag-slash">/</span>` +
+      `<span class="pag-total ${totalClass}"></span>`
+    ),
+    formatFractionCurrent: pad2,
+    formatFractionTotal: pad2,
+  },
+
+  // 細い進捗バー（スクショ風）
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
   },
 });
 

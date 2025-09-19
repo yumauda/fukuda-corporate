@@ -319,9 +319,9 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: var(--swiper-pagination-bottom, 8px);
+ /*  bottom: var(--swiper-pagination-bottom, 8px);
   top: var(--swiper-pagination-top, auto);
-  left: 0;
+  left: 0; */
   width: 100%;
 }
 .swiper-pagination-bullets-dynamic {
@@ -491,10 +491,10 @@ button.swiper-pagination-bullet {
 }
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
-  position: absolute;
-  left: var(--swiper-scrollbar-sides-offset, 1%);
+/*   position: absolute; */
+/*   left: var(--swiper-scrollbar-sides-offset, 1%);
   bottom: var(--swiper-scrollbar-bottom, 4px);
-  top: var(--swiper-scrollbar-top, auto);
+  top: var(--swiper-scrollbar-top, auto); */
   z-index: 50;
   height: var(--swiper-scrollbar-size, 4px);
   width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));

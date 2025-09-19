@@ -13,7 +13,6 @@
         </a>
     </div>
 </div>
-
 <footer class="p-footer">
     <div class="l-inner">
         <div class="p-footer__content">

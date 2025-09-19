@@ -4,6 +4,15 @@
   position: relative;
   z-index: 11;
 }
+.p-submit::before {
+  position: absolute;
+  content: "";
+  background: #ebebeb;
+  top: -1px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
 
 .p-submit__content {
   background: rgba($color: #fff, $alpha: 0.95);

@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.p-recruit {
+  position: relative;
+  z-index: 2;
+  background: #ebebeb;
+  overflow-x: clip;
+}
+
+.p-recruit__content {
+  max-width: rem(1400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.p-recruit__bg {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+.p-recruit__bg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-recruit__detail {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.p-recruit__title {
+  font-size: rem(60);
+  font-weight: 900;
+  color: #464646;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 2;
+}
+.p-recruit__title::before {
+  position: absolute;
+  content: "recruit";
+  text-transform: uppercase;
+  font-family: $lato-italic;
+  font-size: rem(170);
+  color: rgba($color: #fff, $alpha: 0.5);
+  top: rem(-120);
+  left: 0;
+  font-style: italic;
+  z-index: -1;
+}
+
+.p-recruit__btn-wrapper {
+  margin-top: rem(40);
+}
+
+.p-recruit__btn {
+  background: #00a040;
+  width: rem(363);
+  height: rem(75);
+  color: #fff;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: rem(24);
+  backdrop-filter: blur(16px);
+}

@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.p-us {
+  background: #ebebeb;
+  padding-top: rem(190);
+  padding-bottom: rem(190);
+  position: relative;
+  z-index: 2;
+}
+
+.p-us__content {
+  max-width: rem(1400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-us__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: url(../images/common/us_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: rem(60);
+  padding-left: rem(70);
+  padding-right: rem(57);
+}
+
+.p-us__detail {
+  display: flex;
+  align-items: center;
+}
+
+.p-us__left {
+  display: flex;
+  align-items: center;
+  gap: rem(80);
+}
+
+.p-us__block {
+}
+
+.p-us__title {
+  font-size: rem(30);
+  font-weight: 400;
+  color: #fff;
+}
+
+.p-us__text {
+  margin-top: rem(10);
+  font-size: rem(16);
+  line-height: calc(30 / 16);
+  color: #fff;
+  font-weight: 400;
+}
+
+.p-us__icon {
+  width: rem(46);
+}
+.p-us__icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-us__img {
+  max-width: rem(470);
+  width: 100%;
+  margin-left: rem(56);
+}
+.p-us__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
