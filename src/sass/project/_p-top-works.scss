@@ -5,6 +5,8 @@
   padding-bottom: rem(270);
   background: #ebebeb;
   overflow: clip;
+  position: relative;
+  z-index: 1;
 }
 
 .p-top-works__content {

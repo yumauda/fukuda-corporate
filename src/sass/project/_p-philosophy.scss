@@ -7,19 +7,21 @@
 .p-philosophy__content {
   position: relative;
   padding-top: rem(100);
+  padding-bottom: rem(150);
 }
 .p-philosophy__content::before {
   position: absolute;
   content: "";
   background: linear-gradient(to bottom, #302a28 0%, #00a040 100%);
-  aspect-ratio: 1700 / 1393;
-  object-fit: cover;
   width: 100%;
   height: auto;
   z-index: -1;
   border-top-left-radius: rem(200);
   border-bottom-right-radius: rem(200);
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .p-philosophy__title {

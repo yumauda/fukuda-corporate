@@ -1,5 +1,20 @@
 <?php get_header(); ?>
 <main>
+  <section class="p-mv">
+    <div class="p-mv__inner">
+      <div class="p-mv__content">
+        <figure class="p-mv__img">
+          <img src="<?php echo get_template_directory_uri() ?>/images/common/mv_pc.png" alt="人を想いまちを築く" width="1920" height="1080">
+        </figure>
+        <h1 class="p-mv__title">
+          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/mv_title.png" alt="" width="800" height="600">
+        </h1>
+        <div class="p-mv__text">
+          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/mv_vertical.png" alt="人を想いまちを築く" width="106" height="267">
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="p-top-works">
     <div class="l-inner">
       <div class="p-top-works__content">
