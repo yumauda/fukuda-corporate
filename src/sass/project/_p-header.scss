@@ -29,10 +29,13 @@
 }
 
 .p-header__home {
-  width: rem(150);
   display: inline-block;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
   transition: 0.3s ease-in-out;
+  width: rem(100);
+  @include mq(md) {
+    width: rem(150);
+  }
 }
 .p-header.is-active .p-header__home {
   width: rem(80);
@@ -65,9 +68,12 @@
   padding-right: initial;
 }
 .p-header__lists {
-  display: flex;
-  align-items: center;
-  gap: rem(30);
+  display: none;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+  }
 }
 
 .p-header__list {
@@ -87,10 +93,13 @@
 }
 
 .p-header__btn-wrapper {
-  display: flex;
-  margin-left: rem(30);
-  align-items: center;
-  gap: 2px;
+  display: none;
+  @include mq(md) {
+    display: flex;
+    margin-left: rem(30);
+    align-items: center;
+    gap: 2px;
+  }
 }
 
 .p-header__recruit-btn {

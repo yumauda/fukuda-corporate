@@ -1,12 +1,16 @@
 @use "global" as *;
 
 .p-top-works {
-  padding-top: rem(200);
-  padding-bottom: rem(270);
   background: #ebebeb;
   overflow: clip;
   position: relative;
   z-index: 1;
+  padding-top: rem(64);
+  padding-bottom: rem(64);
+  @include mq(md) {
+    padding-top: rem(200);
+    padding-bottom: rem(270);
+  }
 }
 
 .p-top-works__content {
@@ -20,10 +24,13 @@
 
 .p-top-works__title-en {
   font-weight: 900;
-  font-size: rem(20);
   color: #00a040;
   display: block;
   font-family: $lato;
+  font-size: rem(12);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-top-works__title-ja {
@@ -31,6 +38,7 @@
   font-weight: 700;
   margin-top: rem(17);
   display: block;
+  font-size: rem(20);
   @include mq(md) {
     font-size: rem(60);
   }
@@ -40,16 +48,23 @@
 }
 
 .p-top-works__slider-wrapper {
-  margin-top: rem(72);
-  margin-right: calc(50% - 50vw);
-  display: flex;
-  align-items: stretch;
-  gap: 24px;
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(72);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    align-items: stretch;
+    gap: rem(24);
+  }
 }
 
 .p-top-works__slider {
-  flex: 1 1 0;
-  min-width: 0;
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: initial;
+    flex: 1 1 0;
+    min-width: 0;
+  }
 }
 .swiper {
 }
@@ -84,9 +99,11 @@
 }
 
 .p-top-works__slider-page {
-  flex: 0 0 360px; // basis=360px
-  max-width: 360px;
   display: block;
+  @include mq(md) {
+    flex: 0 0 rem(360);
+    max-width: rem(360);
+  }
 }
 .p-top-works__slider-page img {
   width: 100%;
@@ -109,10 +126,13 @@
 }
 
 .p-top-works__detail-text {
-  font-size: rem(24);
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.05em;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 .p-top-works__pagers {
   margin-top: rem(30);
@@ -147,4 +167,13 @@
   position: relative !important;
   max-width: rem(890);
   width: 100%;
+}
+.pag-current,
+.pag-slash,
+.pag-total {
+  color: #242424;
+  font-family: $outfit;
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }

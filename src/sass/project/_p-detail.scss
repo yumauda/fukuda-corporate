@@ -13,11 +13,15 @@
 }
 
 .p-detail {
-  padding-top: rem(400);
-  padding-bottom: rem(200);
   position: relative;
   z-index: 2;
   inset: 0;
+  padding-top: rem(200);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(400);
+    padding-bottom: rem(200);
+  }
 }
 .p-detail::before {
   content: "";
@@ -61,8 +65,10 @@
 }
 
 .p-detail__detail {
-  display: flex;
-  gap: rem(150);
+  @include mq(md) {
+    display: flex;
+    gap: rem(150);
+  }
 }
 
 .p-detail__detail-img {
@@ -77,8 +83,11 @@
 }
 
 .p-detail__block {
-  max-width: rem(600);
   width: 100%;
+  margin-top: rem(24);
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .p-detail__subTitle-wrapper {
@@ -88,16 +97,22 @@
 }
 
 .p-detail__subTitle {
-  font-size: rem(28);
   font-family: $lato;
   font-weight: 700;
   color: #00a040;
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(28);
+  }
 }
 .p-detail__subTitle-ja {
-  font-size: rem(20);
   font-weight: 500;
   color: #00a040;
   position: relative;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 .p-detail__subTitle-ja::before {
   position: absolute;
@@ -111,30 +126,43 @@
 }
 
 .p-detail__title {
-  margin-top: rem(38);
-  font-size: rem(40);
   font-weight: 700;
   color: #fff;
   line-height: 1.5;
+  font-size: rem(22);
+  margin-top: rem(16);
+  @include mq(md) {
+    font-size: rem(40);
+    margin-top: rem(38);
+  }
 }
 
 .p-detail__text-wrapper {
-  margin-top: rem(27);
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(27);
+  }
 }
 
 .p-detail__text {
-  font-size: rem(18);
   font-weight: 400;
   color: #fff;
   line-height: calc(34 / 18);
   letter-spacing: 0.05em;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .p-detail__btn-wrapper {
-  margin-top: rem(30);
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
 .p-detail__btn {
@@ -145,13 +173,19 @@
   gap: rem(50);
   background: #00a040;
   border-radius: 999px;
-  height: rem(50);
+  height: rem(40);
+  @include mq(md) {
+    height: rem(50);
+  }
 }
 
 .p-detail__btn-text {
   color: #fff;
   font-weight: 400;
-  font-size: rem(16);
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .p-detail__icon {
@@ -164,9 +198,11 @@
   object-position: center center;
 }
 .p-detail__shape {
-  margin-top: rem(70);
+  margin-top: rem(32);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
 }
-
 .p-detail__link {
   display: block;
 }

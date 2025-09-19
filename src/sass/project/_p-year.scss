@@ -1,11 +1,15 @@
 @use "global" as *;
 
 .p-year {
-  padding-top: rem(400);
-  padding-bottom: rem(200);
   position: relative;
   z-index: 2;
   inset: 0;
+  padding-top: rem(200);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(400);
+    padding-bottom: rem(200);
+  }
 }
 .p-year::before {
   content: "";
@@ -40,21 +44,28 @@
   pointer-events: none; // 背景なので操作は透過
 }
 .p-year__content {
-  display: flex;
-  align-items: center;
-  gap: rem(102);
   position: relative;
   z-index: 3;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(102);
+  }
 }
 
 .p-year__detail {
-  max-width: rem(688);
   width: 100%;
+  @include mq(md) {
+    max-width: rem(688);
+  }
 }
 
 .p-year__title {
-  max-width: rem(380);
   width: 100%;
+  max-width: rem(250);
+  @include mq(md) {
+    max-width: rem(380);
+  }
 }
 .p-year__title img {
   width: 100%;
@@ -64,19 +75,29 @@
 }
 
 .p-year__text-wrapper {
-  margin-top: rem(45);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(45);
+  }
 }
 
 .p-year__text {
-  font-size: rem(24);
   font-weight: 700;
   color: #fff;
   line-height: calc(54 / 24);
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 
 .p-year__img {
-  max-width: rem(910);
   width: 100%;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: initial;
+    max-width: rem(910);
+  }
 }
 .p-year__img img {
   width: 100%;

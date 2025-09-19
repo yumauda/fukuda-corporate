@@ -36,24 +36,30 @@
 }
 
 .p-recruit__title {
-  font-size: rem(60);
   font-weight: 900;
   color: #464646;
   letter-spacing: 0.05em;
   position: relative;
+  font-size: rem(28);
   z-index: 2;
+  @include mq(md) {
+    font-size: rem(60);
+  }
 }
 .p-recruit__title::before {
   position: absolute;
   content: "recruit";
   text-transform: uppercase;
   font-family: $lato-italic;
-  font-size: rem(170);
   color: rgba($color: #fff, $alpha: 0.5);
   top: rem(-120);
   left: 0;
   font-style: italic;
   z-index: -1;
+  font-size: rem(56);
+  @include mq(md) {
+    font-size: rem(170);
+  }
 }
 
 .p-recruit__btn-wrapper {
@@ -62,8 +68,6 @@
 
 .p-recruit__btn {
   background: #00a040;
-  width: rem(363);
-  height: rem(75);
   color: #fff;
   border-radius: 9999px;
   display: flex;
@@ -71,6 +75,13 @@
   justify-content: center;
   color: #fff;
   font-weight: 700;
-  font-size: rem(24);
   backdrop-filter: blur(16px);
+  width: 100%;
+  height: rem(56);
+  font-size: rem(16);
+  @include mq(md) {
+    width: rem(363);
+    font-size: rem(24);
+    height: rem(75);
+  }
 }
