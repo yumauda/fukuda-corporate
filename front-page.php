@@ -157,15 +157,27 @@
                   </div>
                 </div>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
+              <div class="p-top-works__pagers">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="p-top-works__pagers-buttons">
+                  <div class="swiper-button-prev">
+                    <div class="p-top-works__button-icon">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/prev.png" alt="" width="15" height="12">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <div class="p-top-works__button-icon">
+                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/next.png" alt="" width="15" height="12">
+                    </div>
+                  </div>
+                </div>
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
 
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>

@@ -4156,7 +4156,7 @@ input::placeholder {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100dvh;
 }
 
 .p-mv__title {
