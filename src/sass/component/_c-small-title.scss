@@ -2,12 +2,15 @@
 
 .c-small-title {
   color: #00a040;
-  font-size: rem(34);
   letter-spacing: 0.05em;
   font-weight: 400;
   text-align: center;
   display: inline-block;
   position: relative;
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(34);
+  }
 }
 .c-small-title--white {
   color: #fff;
@@ -15,7 +18,7 @@
 .c-small-title::before {
   position: absolute;
   content: "";
-  background: #00A040;
+  background: #00a040;
   width: rem(20);
   height: 3px;
   bottom: rem(-16);
