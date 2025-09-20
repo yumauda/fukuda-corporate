@@ -1,7 +1,10 @@
 @use "global" as *;
 
 .p-kind {
-  padding-bottom: rem(200);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-bottom: rem(200);
+  }
 }
 
 .p-kind__content {
@@ -16,9 +19,14 @@
 }
 
 .p-kind__lists {
-  margin-top: rem(90);
+  margin-top: rem(40);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(90);
+  }
 }
 
 .p-kind__list {
@@ -27,11 +35,14 @@
 
 .p-kind__link {
   display: block;
-  padding: rem(85) rem(48);
   background: transparent;
   transition: 0.3s ease-in-out;
   position: relative;
   height: 100%;
+  padding: rem(16);
+  @include mq(md) {
+    padding: rem(85) rem(48);
+  }
 }
 
 .p-kind__link::before {
@@ -173,8 +184,10 @@
   visibility: visible;
 }
 .p-number__top-wrapper {
-  display: flex;
-  justify-content: space-between;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .p-kind__number {
@@ -195,18 +208,23 @@
 .p-kind__number-num {
   font-family: $outfit;
   font-weight: 700;
-  font-size: rem(52);
   font-weight: 700;
   color: #00a040;
   transition: 0.3s ease-in-out;
+  font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(52);
+  }
 }
 
 .p-kind__img {
-  max-width: rem(240);
   width: 100%;
   transition: 0.3s ease-in-out;
   opacity: 1;
   visibility: visible;
+  @include mq(md) {
+    max-width: rem(240);
+  }
 }
 .p-kind__link:hover .p-kind__img {
   opacity: 0;
@@ -223,25 +241,35 @@
 .p-kind__detail {
   position: relative;
   z-index: 2;
-  margin-top: rem(-24);
+  margin-top: rem(12);
+  @include mq(md) {
+    margin-top: rem(-24);
+  }
 }
 
 .p-kind__detail-title {
   color: #242424;
-  font-size: rem(26);
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: 0.3s ease-in-out;
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(26);
+  }
 }
 
 .p-kind__detail-text {
-  margin-top: rem(10);
-  font-size: rem(16);
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: calc(30 / 16);
   color: #242424;
   transition: 0.3s ease-in-out;
+  font-size: rem(14);
+  margin-top: rem(8);
+  @include mq(md) {
+    margin-top: rem(10);
+    font-size: rem(16);
+  }
 }
 
 .p-kind__link:hover .p-kind__number-num,
@@ -273,16 +301,24 @@
   transition: 0.3s ease-in-out;
   width: rem(210);
   border: 1px solid #fff;
-  height: rem(50);
   border-radius: 9999px;
-  padding-left: rem(30);
-  padding-right: rem(30);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  height: rem(40);
+  @include mq(md) {
+    height: rem(50);
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
 }
 
 .p-kind__btn-text {
-  font-size: rem(16);
   color: #fff;
   font-weight: 400;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .p-kind__btn-icon {
@@ -295,33 +331,48 @@
   object-position: center center;
 }
 .p-kind__bottom-btnWrapper {
-  margin-top: rem(80);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
 
 .p-kind__bottom-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: rem(347);
-  height: rem(86);
-  padding-left: rem(50);
-  padding-right: rem(50);
-  background: #00A040;
+  background: #00a040;
   border-radius: 9999px;
+  width: rem(280);
+  height: rem(60);
+  padding-left: rem(24);
+  padding-right: rem(24);
+  @include mq(md) {
+    width: rem(347);
+    height: rem(86);
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
 }
 
 .p-kind__bottom-btn-text {
   color: #fff;
-  font-size: rem(22);
   letter-spacing: 0.05em;
   font-weight: 400;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(22);
+  }
 }
 
 .p-kind__bottom-btn-icon {
-  width: rem(46);
+  width: rem(32);
+  @include mq(md) {
+    width: rem(46);
+  }
 }
 .p-kind__bottom-btn-icon img {
   width: 100%;
