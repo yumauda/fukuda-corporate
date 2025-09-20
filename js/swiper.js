@@ -44,9 +44,15 @@ let swiper = new Swiper(".swiper1", {
 
 let thumbSwiper = new Swiper(".thumbSwiper", {
   spaceBetween: 10,
-  slidesPerView: 4,
+  slidesPerView: 2,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+  },
 });
 
 let mainSwiper = new Swiper(".mainSwiper", {
