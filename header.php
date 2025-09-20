@@ -137,17 +137,33 @@
                                 <a href="<?php echo esc_url(home_url('/')); ?>" class="p-drawer-content__link">トップ</a>
                             </li>
                             <li class="p-drawer-content__list">
-                                <a href="<?php echo esc_url(home_url('/about')); ?>" class="p-drawer-content__link">TRUXiAについて</a>
+                                <a href="<?php echo esc_url(home_url('/civil')); ?>" class="p-drawer-content__link">土木事業</a>
                             </li>
                             <li class="p-drawer-content__list">
-                                <a href="<?php echo esc_url(home_url('/business')); ?>" class="p-drawer-content__link">事業紹介</a>
+                                <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-drawer-content__link">建築事業</a>
                             </li>
                             <li class="p-drawer-content__list">
-                                <a href="<?php echo esc_url(home_url('/talent')); ?>" class="p-drawer-content__link">タレント紹介</a>
+                                <a href="<?php echo esc_url(home_url('/agri')); ?>" class="p-drawer-content__link">アグリ事業</a>
                             </li>
                             <li class="p-drawer-content__list">
-                                <a href="<?php echo esc_url(home_url('/news')); ?>" class="p-drawer-content__link">お知らせ</a>
+                                <a href="<?php echo esc_url(home_url('/solar')); ?>" class="p-drawer-content__link">ソーラー発電事業</a>
                             </li>
+                            <li class="p-drawer-content__list">
+                                <a href="<?php echo esc_url(home_url('/estate')); ?>" class="p-drawer-content__link">不動産事業</a>
+                            </li>
+                            <li class="p-drawer-content__list">
+                                <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-drawer-content__link">土木事業</a>
+                            </li>
+                            <li class="p-drawer-content__list">
+                                <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-drawer-content__link">建築事業</a>
+                            </li>
+                            <li class="p-drawer-content__list">
+                                <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-drawer-content__link">会社概要</a>
+                            </li>
+                            <li class="p-drawer-content__list">
+                                <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-drawer-content__link">お問い合わせ</a>
+                            </li>
+                            
                         </ul>
                         
                     </div>

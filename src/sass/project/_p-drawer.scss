@@ -81,9 +81,10 @@
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
-  padding-top: rem(125);
+  padding-top: rem(64);
   padding-left: rem(32);
   padding-right: rem(32);
+  overflow-y: auto;
   @include mq(md) {
     padding-top: rem(8);
     padding-left: initial;

@@ -1464,12 +1464,13 @@ select::-ms-expand {
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  padding-top: 125px;
-  padding-top: 7.8125rem;
+  padding-top: 64px;
+  padding-top: 4rem;
   padding-left: 32px;
   padding-left: 2rem;
   padding-right: 32px;
   padding-right: 2rem;
+  overflow-y: auto;
 }
 @media screen and (min-width: 768px) {
   .p-drawer-content {
