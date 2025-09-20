@@ -19,7 +19,6 @@ jQuery(function ($) {
     const scrollPosition = $(window).scrollTop();
 
     if (scrollPosition > 300) {
-      // 300px以上スクロールしたら
       $(".p-header").addClass("is-active");
     } else {
       $(".p-header").removeClass("is-active");
@@ -247,16 +246,6 @@ jQuery(document).ready(function ($) {
     }
   });
 });
-/* jQuery(".js-modal-btn").on("click", function (e) {
-  e.preventDefault();
-  jQuery(".p-modal").toggleClass("is-active");
-  return false;
-});
-jQuery(".p-modal__close").on("click", function (e) {
-  e.preventDefault();
-  jQuery(".p-modal").removeClass("is-active");
-  return false;
-}); */
 
 // スクロールロック（任意）
 document.documentElement.classList.remove("u-modal-open");

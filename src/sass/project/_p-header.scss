@@ -52,7 +52,6 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  background: #fff;
   border-radius: 9999px;
   padding-left: rem(50);
   height: rem(70);
@@ -60,6 +59,11 @@
   margin-top: rem(20);
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
   transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 1000000;
+  @include mq(md) {
+    background: #fff;
+  }
 }
 .p-header.is-active .p-header__nav {
   height: rem(80);
