@@ -4836,8 +4836,8 @@ input::placeholder {
 }
 
 .p-news__content {
-  max-width: 1700px;
-  max-width: 106.25rem;
+  max-width: 1400px;
+  max-width: 87.5rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;

@@ -28,7 +28,7 @@
         
       </div>
       <div class="p-single-topics__btn-wrapper">
-          <a href="<?php echo esc_url(home_url('/topics')); ?>" class="p-single-topics__btn">
+          <a href="<?php echo esc_url(home_url('/news')); ?>" class="p-single-topics__btn">
 
             <p class="p-single-topics__btn-text">一覧へ戻る</p>
             <span class="p-single-topics__icon">

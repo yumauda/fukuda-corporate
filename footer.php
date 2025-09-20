@@ -52,13 +52,13 @@
                                 <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-footer__sub-link">建築事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">アグリ事業</a>
+                                <a href="<?php echo esc_url(home_url('/agri')); ?>" class="p-footer__sub-link">アグリ事業</a>
                             </li>
                             <li class="p-footer__sub-list">
                                 <a href="<?php echo esc_url(home_url('/solar')); ?>" class="p-footer__sub-link">ソーラー発電事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">不動産事業</a>
+                                <a href="<?php echo esc_url(home_url('/estate')); ?>" class="p-footer__sub-link">不動産事業</a>
                             </li>
                         </ul>
                     </li>
@@ -66,15 +66,15 @@
                         <a href="#" class="p-footer__link">施工実績</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">土木事業</a>
+                                <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-footer__sub-link">土木事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">建築事業</a>
+                                <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-footer__sub-link">建築事業</a>
                             </li>
                         </ul>
                     </li>
                     <li class="p-footer__list">
-                        <a href="#" class="p-footer__link">会社概要</a>
+                        <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-footer__link">会社概要</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
                                 <a href="#" class="p-footer__sub-link">会社概要</a>
