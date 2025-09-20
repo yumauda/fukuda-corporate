@@ -1,13 +1,20 @@
 @use "global" as *;
 
 .p-archive {
-  padding-top: rem(160);
-  padding-bottom: rem(180);
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(160);
+    padding-bottom: rem(180);
+  }
 }
 
 .p-archive--green {
   background: #00a040;
-  margin-top: rem(-100);
+  margin-top: rem(-50);
+  @include mq(md) {
+    margin-top: rem(-100);
+  }
 }
 
 .p-archive__content {
@@ -20,11 +27,16 @@
   text-align: center;
 }
 .p-archive__lists {
-  margin-top: rem(70);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: rem(30);
-  column-gap: rem(25);
+  margin-top: rem(40);
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(16);
+  @include mq(md) {
+    row-gap: rem(30);
+    column-gap: rem(25);
+    margin-top: rem(70);
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .p-archive__list {
@@ -32,14 +44,19 @@
 
 .p-archive__link {
   display: block;
-  padding-top: rem(15);
-  padding-bottom: rem(56);
-  padding-left: rem(15);
-  padding-right: rem(15);
   transition: 0.3s ease-in-out;
   background: transparent;
-  border-radius: rem(20);
   height: 100%;
+  padding: rem(10);
+  border-radius: rem(10);
+
+  @include mq(md) {
+    padding-top: rem(15);
+    padding-bottom: rem(56);
+    padding-left: rem(15);
+    padding-right: rem(15);
+    border-radius: rem(20);
+  }
 }
 .p-archive--green .p-archive__link {
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.15));
@@ -57,9 +74,12 @@
 }
 
 .p-archive__detail {
-  margin-top: rem(20);
   padding-left: rem(12);
   padding-right: rem(12);
+  margin-top: rem(12);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }
 
 .p-archive__meta {
@@ -70,11 +90,14 @@
 
 .p-archive__time {
   font-family: $outfit;
-  font-size: rem(16);
   font-weight: 700;
   color: #00a040;
   letter-spacing: 0.05em;
   line-height: 1;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .p-archive__category {
@@ -90,11 +113,14 @@
 
 .p-archive__title {
   margin-top: rem(5);
-  font-size: rem(18);
   font-weight: 700;
   letter-spacing: 0.05em;
   line-height: 2;
   color: #242424;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .p-archive__tag-wrapper {

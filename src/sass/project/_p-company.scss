@@ -1,8 +1,11 @@
 @use "global" as *;
 
 .p-company {
-  padding-top: rem(200);
-  padding-bottom: rem(60);
+  padding-bottom: rem(32);
+  @include mq(md) {
+    padding-top: rem(200);
+    padding-bottom: rem(60);
+  }
 }
 
 .p-company__content {
@@ -18,22 +21,31 @@
 }
 
 .p-company__detail {
-  max-width: rem(700);
   width: 100%;
+  @include mq(md) {
+    max-width: rem(700);
+  }
 }
 
 .p-company__title {
 }
 
 .p-company__dl {
-  margin-top: rem(50);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
 }
 
 .p-company__row {
-  padding-top: rem(30);
-  padding-bottom: rem(30);
-  display: flex;
+  padding-top: rem(20);
+  padding-bottom: rem(20);
   border-top: 1px solid #d6d6d6;
+  @include mq(md) {
+    display: flex;
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+  }
 }
 .p-company__row:last-child {
   border-bottom: 1px solid #d6d6d6;
@@ -41,27 +53,35 @@
 
 .p-company__dt {
   font-weight: 700;
-  font-size: rem(16);
   color: #242424;
   letter-spacing: 0.05em;
+  font-size: rem(14);
   @include mq(md) {
+    font-size: rem(16);
     width: rem(250);
   }
 }
 
 .p-company__dd {
-  font-size: rem(16);
   letter-spacing: 0.05em;
   line-height: calc(30 / 16);
   color: #242424;
+  font-size: rem(14);
+  margin-top: rem(8);
   @include mq(md) {
+    margin-top: initial;
+    font-size: rem(16);
     width: calc(100% - rem(250));
   }
 }
 
 .p-company__img {
-  max-width: rem(600);
   width: 100%;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: initial;
+    max-width: rem(600);
+  }
 }
 
 .p-company__img img {

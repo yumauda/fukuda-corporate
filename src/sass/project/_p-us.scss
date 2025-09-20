@@ -20,8 +20,6 @@
 }
 
 .p-us__link {
-  display: flex;
-  align-items: center;
   width: 100%;
   background: url(../images/common/us_bg.png);
   background-repeat: no-repeat;
@@ -30,8 +28,14 @@
   border-top-left-radius: rem(30);
   padding-left: rem(20);
   padding-right: rem(20);
-
+  padding-top: rem(60);
+  padding-bottom: rem(40);
+  display: block;
   @include mq(md) {
+    display: flex;
+    align-items: center;
+    padding-top: initial;
+    padding-bottom: initial;
     border-top-left-radius: rem(60);
     padding-left: rem(70);
     padding-right: rem(57);
@@ -78,7 +82,13 @@
 
 .p-us__icon {
   width: rem(32);
+  margin-top: rem(12);
+  margin-left: auto;
+  margin-right: auto;
   @include mq(md) {
+    margin-top: initial;
+    margin-left: initial;
+    margin-right: initial;
     width: rem(46);
   }
 }
@@ -91,8 +101,10 @@
 
 .p-us__img {
   width: 100%;
-  margin-left: rem(24);
+  margin-top: rem(12);
   @include mq(md) {
+    margin-top: initial;
+    margin-left: rem(24);
     max-width: rem(470);
     margin-left: rem(56);
   }
