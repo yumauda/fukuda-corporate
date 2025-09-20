@@ -22,10 +22,17 @@
   width: 100vw;
 }
 .p-recruit__bg img {
+  aspect-ratio: 420 / 300;
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center center;
+  @include mq(md) {
+    aspect-ratio: initial;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 .p-recruit__detail {
@@ -52,12 +59,13 @@
   text-transform: uppercase;
   font-family: $lato-italic;
   color: rgba($color: #fff, $alpha: 0.5);
-  top: rem(-120);
   left: 0;
   font-style: italic;
   z-index: -1;
   font-size: rem(56);
+  top: rem(-56);
   @include mq(md) {
+    top: rem(-120);
     font-size: rem(170);
   }
 }

@@ -135,13 +135,20 @@
   }
 }
 .p-top-works__pagers {
-  margin-top: rem(30);
   display: flex;
-  gap: rem(30);
   align-items: center;
+  margin-top: rem(20);
+  gap: rem(20);
+  @include mq(md) {
+    margin-top: rem(30);
+    gap: rem(30);
+  }
 }
 .p-top-works__button-icon {
-  width: rem(46);
+  width: rem(32);
+  @include mq(md) {
+    width: rem(46);
+  }
 }
 .p-top-works__button-icon img {
   width: 100%;

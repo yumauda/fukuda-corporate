@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .p-success {
+  padding-bottom: rem(64);
   @include mq(md) {
     padding-bottom: rem(200);
   }
@@ -13,30 +14,47 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: rem(30);
-  padding: rem(70);
+  padding: rem(16);
+  border-radius: rem(20);
+  @include mq(md) {
+    border-radius: rem(30);
+    padding: rem(70);
+  }
 }
 
 .p-success__title-wrapper {
   text-align: center;
   background: #f9f9f9;
   border-radius: rem(5);
-  padding-top: rem(14);
-  padding-bottom: rem(14);
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  @include mq(md) {
+    padding-top: rem(14);
+    padding-bottom: rem(14);
+  }
 }
 
 .p-success__title {
-  font-size: rem(20);
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #242424;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-success__row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(60);
-  margin-top: rem(40);
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(24);
+  margin-top: rem(24);
+
+  @include mq(md) {
+    gap: rem(60);
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(40);
+  }
 }
 
 .p-success__block {
@@ -46,21 +64,30 @@
 }
 
 .p-success__blockTitle {
-  font-size: rem(20);
   font-weight: 700;
   color: #00a040;
-  letter-spacing: 0.05em;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-success__dl {
-  margin-top: rem(20);
+  margin-top: rem(12);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }
 
 .p-success__dlRow {
-  display: flex;
-  padding-top: rem(18);
-  padding-bottom: rem(18);
   border-top: 1px solid #e9e9e9;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  @include mq(md) {
+    display: flex;
+    padding-top: rem(18);
+    padding-bottom: rem(18);
+  }
 }
 .p-success__dlRow:last-child {
   border-bottom: 1px solid #e9e9e9;
@@ -77,12 +104,15 @@
 }
 
 .p-success__dd {
-  font-size: rem(16);
   line-height: calc(30 / 16);
   letter-spacing: 0.05em;
   font-weight: 400;
   color: #242424;
+  font-size: rem(14);
+  margin-top: rem(8);
   @include mq(md) {
+    margin-top: initial;
+    font-size: rem(16);
     width: calc(100% - rem(170));
   }
 }

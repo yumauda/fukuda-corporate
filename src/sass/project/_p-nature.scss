@@ -9,37 +9,57 @@
   margin-left: auto;
   margin-right: auto;
   background: #fff;
-  border-radius: rem(30);
-  padding: rem(70);
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.05));
-  margin-top: rem(-140);
-  display: flex;
-  align-items: center;
-  gap: rem(99);
+  margin-top: rem(-32);
+  padding: rem(16);
+  border-radius: rem(20);
+  @include mq(md) {
+    border-radius: rem(30);
+    display: flex;
+    padding: rem(70);
+    align-items: center;
+    gap: rem(99);
+    margin-top: rem(-140);
+  }
 }
 
 .p-nature__title-wrapper {
 }
 
 .p-nature__title {
-  font-size: rem(34);
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #00a040;
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(34);
+  }
 }
 
 .p-nature__detail {
-  flex: 1;
-  padding-left: rem(30);
-  border-left: 1px solid #e9e9e9;
+  margin-top: rem(16);
+  padding-top: rem(16);
+  border-top: 1px solid #e9e9e9;
+
+  @include mq(md) {
+    margin-top: initial;
+    padding-top: initial;
+    border-top: initial;
+    flex: 1;
+    padding-left: rem(30);
+    border-left: 1px solid #e9e9e9;
+  }
 }
 
 .p-nature__detail-title {
-  font-size: rem(20);
   font-weight: 400;
   letter-spacing: 0.05em;
   color: #242424;
   line-height: calc(34 / 20);
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-nature__lists {
@@ -48,21 +68,28 @@
 
 .p-nature__list {
   position: relative;
-  font-size: rem(16);
   line-height: calc(34 / 16);
   font-weight: 400;
   letter-spacing: 0.05em;
   color: #242424;
-  padding-left: rem(15);
+  font-size: rem(14);
+  padding-left: rem(12);
+  @include mq(md) {
+    padding-left: rem(15);
+    font-size: rem(16);
+  }
 }
 
 .p-nature__list::before {
   content: "";
   position: absolute;
   left: 0;
-  top: rem(8);
   width: rem(5);
   height: rem(5);
   background: #242424;
   border-radius: 9999px;
+  top: rem(12);
+  @include mq(md) {
+    top: rem(8);
+  }
 }
