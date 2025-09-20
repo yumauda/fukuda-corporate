@@ -1,8 +1,12 @@
 @use "global" as *;
 
 .p-privacy {
-  padding-top: rem(100);
-  padding-bottom: rem(200);
+  padding-top: rem(50);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(200);
+  }
 }
 
 .p-privacy__content {
@@ -10,12 +14,16 @@
   width: 100%;
   margin-inline: auto;
   background: #fff;
-  border-radius: rem(30);
-  padding-top: rem(83);
-  padding-left: rem(83);
-  padding-right: rem(83);
-  padding-bottom: rem(150);
   filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.05));
+  padding: rem(16);
+  border-radius: rem(20);
+  @include mq(md) {
+    border-radius: rem(30);
+    padding-top: rem(83);
+    padding-left: rem(83);
+    padding-right: rem(83);
+    padding-bottom: rem(150);
+  }
 }
 
 .p-privacy__top {
@@ -26,33 +34,49 @@
 }
 
 .p-privacy__top-textWrapper {
-  text-align: center;
-  margin-top: rem(60);
+  margin-top: rem(48);
+  @include mq(md) {
+    text-align: center;
+    margin-top: rem(60);
+  }
 }
 
 .p-privacy__top-text {
   color: #242424;
   line-height: calc(34 / 18);
-  font-size: rem(18);
   font-weight: 400;
   letter-spacing: 0.05em;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .p-privacy__block-wrapper {
-  margin-top: rem(100);
-  padding-top: rem(100);
   border-top: 1px solid #e9e9e9;
   max-width: rem(1000);
   width: 100%;
   margin-inline: auto;
+  margin-top: rem(40);
+  padding-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(100);
+    padding-top: rem(100);
+  }
 }
 
 .p-privacy__block {
   display: flex;
-  gap: rem(20);
+  gap: rem(12);
+  @include mq(md) {
+    gap: rem(20);
+  }
 }
 .p-privacy__block + .p-privacy__block {
-  margin-top: rem(50);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
 }
 
 .p-privacy__number-wrapper {
@@ -61,19 +85,25 @@
 
 .p-privacy__number {
   font-family: $outfit;
-  font-size: rem(20);
   font-weight: 700;
   color: rgba($color: #00a040, $alpha: 0.2);
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-privacy__detail {
 }
 
 .p-privacy__block-title {
-  font-size: rem(24);
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #00a040;
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 
 .p-privacy__text-wrapper {
@@ -81,22 +111,31 @@
 }
 
 .p-privacy__text {
-  font-size: rem(16);
   letter-spacing: 0.05em;
   line-height: calc(30 / 16);
   color: #242424;
   font-weight: 400;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .p-privacy__right {
-  margin-top: rem(70);
   text-align: right;
+  margin-top: rem(32);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
 }
 
 .p-privacy__right-text {
-  font-size: rem(18);
   letter-spacing: 0.05em;
   line-height: calc(34 / 18);
   color: #242424;
   font-weight: 400;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
