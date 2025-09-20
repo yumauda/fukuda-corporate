@@ -50,7 +50,7 @@
           </h2>
         </div>
         <div class="p-cycle__text-wrapper">
-          <p class="p-cycle__text">"フクダ"と関わる全ての人と、喜び合える関係でありたい！</p>
+          <p class="p-cycle__text">"フクダ"と関わる全ての人と、<br class="u-mobile">喜び合える関係でありたい！</p>
         </div>
         <figure class="p-cycle__img">
           <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/cycle_img.png" alt=""フクダ"と関わる全ての人と、喜び合える関係でありたい！" width="1400" height="1400">
