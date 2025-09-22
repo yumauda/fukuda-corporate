@@ -2,8 +2,8 @@
 const pad2 = n => String(n).padStart(2, '0');
 
 let swiper = new Swiper(".swiper1", {
-  loop: true,
   centeredSlides: false,
+  loop: true,
   speed: 300,
   slidesPerView: 1.5,
   spaceBetween: 20,
@@ -13,10 +13,7 @@ let swiper = new Swiper(".swiper1", {
       spaceBetween: 30,
     },
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

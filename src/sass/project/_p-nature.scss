@@ -14,16 +14,19 @@
   padding: rem(16);
   border-radius: rem(20);
   @include mq(md) {
-    border-radius: rem(30);
+    margin-top: rem(-20);
+    border-radius: rem(20);
+    padding: rem(48);
     display: flex;
-    padding: rem(70);
     align-items: center;
+    gap: rem(64);
+  }
+  @include mq(lg) {
+    border-radius: rem(30);
+    padding: rem(70);
     gap: rem(99);
     margin-top: rem(-140);
   }
-}
-
-.p-nature__title-wrapper {
 }
 
 .p-nature__title {
@@ -90,6 +93,6 @@
   border-radius: 9999px;
   top: rem(12);
   @include mq(md) {
-    top: rem(8);
+    top: rem(14);
   }
 }

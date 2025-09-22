@@ -46,6 +46,9 @@
 .p-introduce__left-block + .p-introduce__left-block {
   margin-top: rem(24);
   @include mq(md) {
+    margin-top: rem(220);
+  }
+  @include mq(lg) {
     margin-top: rem(350);
   }
 }
