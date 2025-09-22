@@ -71,6 +71,8 @@
   object-fit: cover;
   width: 100%;
   height: auto;
+  border-top-left-radius: rem(20);
+  border-bottom-right-radius: rem(20);
 }
 
 .p-archive__detail {

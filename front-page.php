@@ -116,7 +116,7 @@
         </div>
         <div class="p-top-works__slider-wrapper">
           <div class="p-top-works__slider-link">
-            <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-top-works__slider-page">
+            <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-top-works__slider-page">
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/works_architecture_link.png" alt="" width="360" height="360">
             </a>
           </div>

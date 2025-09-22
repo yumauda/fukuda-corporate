@@ -667,6 +667,10 @@ select::-ms-expand {
      object-fit: cover;
   width: 100%;
   height: auto;
+  border-top-left-radius: 20px;
+  border-top-left-radius: 1.25rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 1.25rem;
 }
 
 .p-archive__detail {
@@ -8753,6 +8757,12 @@ input::placeholder {
   margin-top: 0.25rem;
 }
 @media screen and (min-width: 768px) {
+  .c-main-title__ja--sub {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1540px) {
   .c-main-title__ja--sub {
     font-size: 2.5rem;
     margin-top: 3rem;

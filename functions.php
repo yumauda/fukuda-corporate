@@ -53,6 +53,11 @@ function my_script_init()
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
 		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
+	if (is_post_type_archive('architecture')) {
+		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
+		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
+		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
+	}
 
 	if (is_front_page()) {
 		wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', '', "1.0.1", true);
