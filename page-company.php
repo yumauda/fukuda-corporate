@@ -15,6 +15,50 @@
       </div>
     </div>
   </section>
+  <div class="p-anchor">
+    <ul class="p-anchor__lists">
+      <li class="p-anchor__list">
+        <a href="#message" class="p-anchor__link">
+          <p class="p-anchor__link-text">代表メッセージ</p>
+          <div class="p-anchor__icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/anchor_icon.png" alt="" width="30" height="30">
+          </div>
+        </a>
+      </li>
+      <li class="p-anchor__list">
+        <a href="#company" class="p-anchor__link">
+          <p class="p-anchor__link-text">会社概要</p>
+          <div class="p-anchor__icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/anchor_icon.png" alt="" width="30" height="30">
+          </div>
+        </a>
+      </li>
+      <li class="p-anchor__list">
+        <a href="#certification" class="p-anchor__link">
+          <p class="p-anchor__link-text">認定登録一覧</p>
+          <div class="p-anchor__icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/anchor_icon.png" alt="" width="30" height="30">
+          </div>
+        </a>
+      </li>
+      <li class="p-anchor__list">
+        <a href="#office" class="p-anchor__link">
+          <p class="p-anchor__link-text">事業所一覧</p>
+          <div class="p-anchor__icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/anchor_icon.png" alt="" width="30" height="30">
+          </div>
+        </a>
+      </li>
+      <li class="p-anchor__list">
+        <a href="#group" class="p-anchor__link">
+          <p class="p-anchor__link-text">グループ会社</p>
+          <div class="p-anchor__icon">
+            <img src="<?php echo get_template_directory_uri() ?>/images/common/anchor_icon.png" alt="" width="30" height="30">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
   <section class="p-page-mvImg">
     <div class="l-inner">
       <figure class="p-page-mvImg__img">
@@ -22,7 +66,7 @@
       </figure>
     </div>
   </section>
-  <section class="p-message">
+  <section class="p-message" id="message">
     <div class="l-inner">
       <div class="p-message__content">
         <div class="p-message__detail">
@@ -77,7 +121,7 @@
       </div>
     </div>
   </section>
-  <section class="p-company">
+  <section class="p-company" id="company">
     <div class="l-inner">
       <div class="p-company__content">
         <div class="p-company__detail">
@@ -375,7 +419,7 @@
       </div>
     </div>
   </section>
-  <section class="p-certification">
+  <section class="p-certification" id="certification">
     <div class="l-inner">
       <div class="p-certification__title">
         <h2 class="c-intro-title">
@@ -434,7 +478,7 @@
       </div>
     </div>
   </section>
-  <section class="p-office">
+  <section class="p-office" id="office">
     <div class="l-inner">
       <div class="p-office__content">
         <div class="p-office__title">
@@ -514,7 +558,7 @@
       </div>
     </div>
   </section>
-  <section class="p-group">
+  <section class="p-group" id="group">
     <div class="l-inner">
       <div class="p-group__content">
         <div class="p-group__title">

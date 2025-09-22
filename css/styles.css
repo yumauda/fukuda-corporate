@@ -3996,12 +3996,180 @@ input::placeholder {
   z-index: 0;
 }
 
+.p-kind__link--7::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img7.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--8::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img8.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--9::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img9.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--10::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img10.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--11::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img11.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--12::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img12.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--13::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img13.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.p-kind__link--14::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/kind_img14.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
 .p-kind__link:hover::after,
 .p-kind__link--4:hover::after,
 .p-kind__link--5:hover::after,
 .p-kind__link--6:hover::after,
 .p-kind__link--3:hover::after,
-.p-kind__link--2:hover::after {
+.p-kind__link--2:hover::after,
+.p-kind__link--7:hover::after,
+.p-kind__link--8:hover::after,
+.p-kind__link--9:hover::after,
+.p-kind__link--10:hover::after,
+.p-kind__link--11:hover::after,
+.p-kind__link--12:hover::after,
+.p-kind__link--13:hover::after,
+.p-kind__link--14:hover::after {
   opacity: 1;
   visibility: visible;
 }

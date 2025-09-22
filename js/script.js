@@ -24,6 +24,24 @@ jQuery(function ($) {
       $(".p-header").removeClass("is-active");
     }
   });
+  $(window).on("scroll", function () {
+    const scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition > 300) {
+      $(".p-anchor").addClass("is-active");
+    } else {
+      $(".p-anchor").removeClass("is-active");
+    }
+  });
+  $(window).on("scroll", function () {
+    const scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition > 300) {
+      $(".p-category-anchor").addClass("is-active");
+    } else {
+      $(".p-category-anchor").removeClass("is-active");
+    }
+  });
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
@@ -247,8 +265,22 @@ jQuery(document).ready(function ($) {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var sel = document.getElementById("js-news-category");
+  if (!sel) return;
+
+  sel.addEventListener("change", function (e) {
+    var url = e.target.value;
+    if (url) {
+      window.location.href = url;
+    }
+  });
+});
+
 // スクロールロック（任意）
 document.documentElement.classList.remove("u-modal-open");
+
+
 
 // 開く
 jQuery(document).on("click", ".js-modal-btn", function (e) {
@@ -279,6 +311,14 @@ jQuery(document).on("click", ".js-modal-btn", function (e) {
         pauseOnHover: true,
         arrows: true,
         pagination: true,
+        classes: {
+          // 任意のクラスを上書きできる
+          pagination: 'splide__pagination c-pager',       // ← コンテナに追加したいクラス
+          page:       'splide__pagination__page c-pager__dot', // ← 各ページャー
+          arrows:     'splide__arrows c-arrows',
+          prev:       'splide__arrow--prev c-arrow c-arrow--prev',
+          next:       'splide__arrow--next c-arrow c-arrow--next',
+        },
       }).mount();
       this.__mounted = true;
     });
@@ -287,7 +327,6 @@ jQuery(document).on("click", ".js-modal-btn", function (e) {
   return false;
 });
 
-// 閉じる（×）
 jQuery(document).on("click", ".js-modal-close", function (e) {
   e.preventDefault();
   var $modal = jQuery(this).closest(".p-modal");
@@ -296,14 +335,12 @@ jQuery(document).on("click", ".js-modal-close", function (e) {
   return false;
 });
 
-// モーダルの外側クリックで閉じる
 jQuery(document).on("click", ".p-modal", function (e) {
-  if (jQuery(e.target).closest(".p-modal__content").length) return; // 中身クリックは無視
+  if (jQuery(e.target).closest(".p-modal__content").length) return;
   jQuery(this).removeClass("is-active").attr("aria-hidden", "true");
   document.documentElement.classList.remove("u-modal-open");
 });
 
-// ESCで閉じる
 jQuery(document).on("keydown", function (e) {
   if (e.key === "Escape") {
     var $open = jQuery(".p-modal.is-active");
@@ -313,3 +350,5 @@ jQuery(document).on("keydown", function (e) {
     }
   }
 });
+
+

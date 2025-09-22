@@ -434,3 +434,15 @@ add_filter('body_class', function ($classes) {
 	}
 	return $classes;
 });
+function theme_enqueue_scripts()
+{
+	// 既存のenqueueがあればまとめて書く
+	wp_enqueue_script(
+		'news-category',
+		get_template_directory_uri() . '/js/news-category.js',
+		array(), // 依存がなければ空
+		null,    // バージョン
+		true     // フッターで読み込み
+	);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');

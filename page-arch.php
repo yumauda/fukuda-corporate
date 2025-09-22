@@ -88,14 +88,14 @@
         </div>
         <ul class="p-kind__lists">
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--2">
+            <a href="#" class="p-kind__link p-kind__link--7">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">01</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img1.jpg" alt="道路" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img7.jpg" alt="道路" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -113,14 +113,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link">
+            <a href="#" class="p-kind__link p-kind__link--8">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">02</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img2.jpg" alt="橋梁" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img8.jpg" alt="橋梁" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -138,14 +138,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--3">
+            <a href="#" class="p-kind__link p-kind__link--9">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">03</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img3.jpg" alt="河川" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img9.jpg" alt="河川" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -163,14 +163,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--4">
+            <a href="#" class="p-kind__link p-kind__link--10">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">04</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img4.jpg" alt="河川" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img10.jpg" alt="河川" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -188,14 +188,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--5">
+            <a href="#" class="p-kind__link p-kind__link--11">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">05</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img5.jpg" alt="河川" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img11.jpg" alt="河川" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -213,14 +213,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--6">
+            <a href="#" class="p-kind__link p-kind__link--12">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">06</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img6.jpg" alt="湾港" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img12.jpg" alt="湾港" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -238,14 +238,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--6">
+            <a href="#" class="p-kind__link p-kind__link--13">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">07</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img6.jpg" alt="湾港" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img13.jpg" alt="湾港" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">
@@ -263,14 +263,14 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--6">
+            <a href="#" class="p-kind__link p-kind__link--14">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
                   <p class="p-kind__number-num">08</p>
                 </div>
                 <figure class="p-kind__img">
-                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img6.jpg" alt="湾港" width="240" height="160">
+                  <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/kind_img14.jpg" alt="湾港" width="240" height="160">
                 </figure>
               </div>
               <div class="p-kind__detail">

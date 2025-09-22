@@ -26,6 +26,57 @@
       </figure>
     </div>
   </section>
+  <div class="p-category-anchor">
+    <p class="p-category-anchor__title">Category</p>
+    <div class="p-category-anchor__block-wrapper">
+      <div class="p-category-anchor__block">
+        <div class="p-category-anchor__list-title">土木事業ALL</div>
+        <ul class="p-category-anchor__lists">
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 道路</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 橋梁</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 河川</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- トンネル</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 鉄道</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 湾港</a>
+          </li>
+        </ul>
+      </div>
+      <div class="p-category-anchor__block">
+        <div class="p-category-anchor__list-title no-now">建築事業ALL</div>
+        <ul class="p-category-anchor__lists">
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 道路</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 橋梁</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 河川</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- トンネル</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 鉄道</a>
+          </li>
+          <li class="p-category-anchor__list">
+            <a href="#" class="p-category-anchor__link">- 湾港</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <!-- <section class="p-archive p-archive--green">
     <div class="l-inner">
       <div class="p-archive__content">
@@ -226,16 +277,29 @@
                         <div class="p-splide splide" aria-labelledby="carousel-heading">
                           <div class="splide__track">
                             <ul class="splide__list">
-                              <li class="splide__slide">
-                                <figure class="p-splide__img">
-                                  <?php if (has_post_thumbnail()) : ?>
-                                    <img decoding="async" loading="lazy" src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="520" height="290">
-                                  <?php else : ?>
-                                    <img decoding="async" loading="lazy" src="<?php echo esc_url(get_template_directory_uri() . '/images/common/noimage.jpg'); ?>" alt="画像なし" width="520" height="290">
-                                  <?php endif; ?>
-                                </figure>
-                              </li>
+                              <?php if (have_rows('engineer_img')) : ?>
+                                <?php while (have_rows('engineer_img')) : the_row(); ?>
+                                  <li class="splide__slide">
+                                    <figure class="p-splide__img">
+                                      <?php if (has_post_thumbnail()) : ?>
+                                        <img decoding="async" loading="lazy" src="<?php the_sub_field('engineer_image'); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="520" height="290">
+                                      <?php else : ?>
+                                        <img decoding="async" loading="lazy" src="<?php echo esc_url(get_template_directory_uri() . '/images/common/noimage.jpg'); ?>" alt="画像なし" width="520" height="290">
+                                      <?php endif; ?>
+                                    </figure>
+                                  </li>
+                                <?php endwhile; ?>
+                              <?php endif; ?>
                             </ul>
+                          </div>
+                          <!-- 矢印を追加 -->
+                          <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev button prev">
+                              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/splide_prev.png" alt="前" width="46" height="46">
+                            </button>
+                            <button class="splide__arrow splide__arrow--next button next">
+                              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/splide_next.png" alt="次" width="46" height="46">
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -243,15 +307,15 @@
                       <dl class="p-modal__dl">
                         <div class="p-modal__row">
                           <dt class="p-modal__dt">発注者</dt>
-                          <dd class="p-modal__dd">（サンプル）</dd>
+                          <dd class="p-modal__dd"><?php the_field('engineer_person'); ?></dd>
                         </div>
                         <div class="p-modal__row">
                           <dt class="p-modal__dt">工事場所</dt>
-                          <dd class="p-modal__dd">（サンプル）</dd>
+                          <dd class="p-modal__dd"><?php the_field('engineer_place'); ?></dd>
                         </div>
                         <div class="p-modal__row">
                           <dt class="p-modal__dt">工期</dt>
-                          <dd class="p-modal__dd">（サンプル）</dd>
+                          <dd class="p-modal__dd"><?php the_field('engineer_year'); ?></dd>
                         </div>
                       </dl>
                     </div>

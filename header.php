@@ -97,12 +97,12 @@
                             </a>
                         </li>
                         <li class="p-header__list">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__link">
+                            <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-header__link">
                                 <span class="p-header__link-text">会社概要</span>
                             </a>
                         </li>
                         <li class="p-header__list">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__link">
+                            <a href="<?php echo esc_url(home_url('/sustainability')); ?>" class="p-header__link">
                                 <span class="p-header__link-text">私たちの取り組み</span>
                             </a>
                         </li>

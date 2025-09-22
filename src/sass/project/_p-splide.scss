@@ -16,3 +16,45 @@
   width: 100%;
   height: auto;
 }
+.splide__arrow img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.splide__arrow {
+  display: inline-block;
+  width: rem(32);
+  opacity: 1 !important;
+  @include mq(md) {
+    width: rem(46) !important;
+  }
+}
+.splide__arrow--prev {
+  left: rem(-16) !important;
+  @include mq(md) {
+    left: rem(-23) !important;
+  }
+}
+.splide__arrow--next {
+  right: rem(-16) !important;
+  @include mq(md) {
+    right: rem(-23) !important;
+  }
+}
+.splide__pagination {
+  position: relative !important;
+  margin-top: rem(15) !important;
+}
+.c-pager__dot {
+  background: #00A040 !important;
+  width: rem(7) !important;
+  height: rem(7) !important;
+  border: 1px solid #00A040 !important;
+}
+.c-pager__dot.is-active {
+  background: #fff !important;
+  width: rem(7) !important;
+  height: rem(7) !important;
+  transform: initial !important;
+}

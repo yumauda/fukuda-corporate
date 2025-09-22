@@ -25,42 +25,6 @@
   <div class="p-news">
     <div class="l-inner">
       <div class="p-news__content">
-        <?php
-        // ▼ タクソノミー（CPTなら 'news_cat' 等に変更）
-        $taxonomy = 'category';
-
-        // ▼ 「すべて」に戻るリンク（投稿ページ or ホーム）
-        $all_url = get_option('page_for_posts')
-          ? get_permalink(get_option('page_for_posts'))
-          : home_url('/');
-
-        // ※CPTの一覧に戻す場合は↓
-        // $all_url = get_post_type_archive_link('news');
-
-        $current_term_id = (is_tax($taxonomy) || is_category()) ? get_queried_object_id() : 0;
-
-        $cats = get_terms([
-          'taxonomy'   => $taxonomy,
-          'hide_empty' => 1,
-          'orderby'    => 'name',
-          'order'      => 'ASC',
-        ]);
-        ?>
-        <div class="p-news__select">
-          <select id="js-news-category" class="p-news__select-input">
-            <option value="<?php echo esc_url($all_url); ?>" <?php selected(0, $current_term_id); ?>>すべて</option>
-            <?php if (! is_wp_error($cats) && ! empty($cats)) : ?>
-              <?php foreach ($cats as $cat) :
-                $url = get_term_link($cat);
-                if (is_wp_error($url)) continue;
-              ?>
-                <option value="<?php echo esc_url($url); ?>" <?php selected($cat->term_id, $current_term_id); ?>>
-                  <?php echo esc_html($cat->name); ?>
-                </option>
-              <?php endforeach; ?>
-            <?php endif; ?>
-          </select>
-        </div>
 
         <ul class="p-news__lists">
           <?php if (have_posts()) : ?>
