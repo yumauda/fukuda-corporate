@@ -240,7 +240,7 @@
           </li>
         </ul>
         <div class="p-kind__bottom-btnWrapper">
-          <a href="#" class="p-kind__bottom-btn">
+          <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-kind__bottom-btn">
             <p class="p-kind__bottom-btn-text">施工実績を見る</p>
             <div class="p-kind__bottom-btn-icon">
               <img src="<?php echo get_template_directory_uri() ?>/images/common/btn_arrow.png" alt="" width="46" height="46">
