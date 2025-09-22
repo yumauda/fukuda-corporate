@@ -26,7 +26,7 @@
       </figure>
     </div>
   </section>
-  <div class="p-category-anchor">
+  <!-- <div class="p-category-anchor">
     <p class="p-category-anchor__title">Category</p>
     <div class="p-category-anchor__block-wrapper">
       <div class="p-category-anchor__block">
@@ -76,7 +76,91 @@
         </ul>
       </div>
     </div>
+  </div> -->
+  <div class="p-category-anchor">
+    <p class="p-category-anchor__title">Category</p>
+    <div class="p-category-anchor__block-wrapper">
+
+      <?php
+      // ====== 土木事業（engineer / engineer_category） ======
+      $engineer_archive = get_post_type_archive_link('engineer');
+      $is_engineer_pta  = is_post_type_archive('engineer');
+      $is_engineer_tax  = is_tax('engineer_category');
+      $current_engineer_term_id = $is_engineer_tax ? get_queried_object_id() : 0;
+
+      // すべてのターム取得（空タームも出したければ 'hide_empty' => 0 に）
+      $engineer_terms = get_terms([
+        'taxonomy'   => 'engineer_category',
+        'hide_empty' => 1,
+        'orderby'    => 'name',
+        'order'      => 'ASC',
+      ]);
+      ?>
+      <div class="p-category-anchor__block">
+        <a href="<?php echo esc_url($engineer_archive); ?>"
+          class="p-category-anchor__list-title<?php echo $is_engineer_pta ? ' is-current' : ''; ?>">
+          土木事業ALL
+        </a>
+        <ul class="p-category-anchor__lists">
+          <?php if (! is_wp_error($engineer_terms) && ! empty($engineer_terms)) : ?>
+            <?php foreach ($engineer_terms as $term) :
+              $url = get_term_link($term);
+              if (is_wp_error($url)) continue;
+              $active = ($is_engineer_tax && $current_engineer_term_id === $term->term_id) ? ' is-current' : '';
+            ?>
+              <li class="p-category-anchor__list">
+                <a href="<?php echo esc_url($url); ?>"
+                  class="p-category-anchor__link<?php echo $active; ?>"
+                  <?php echo $active ? 'aria-current="page"' : ''; ?>>
+                  - <?php echo esc_html($term->name); ?>
+                </a>
+              </li>
+            <?php endforeach; ?>
+          <?php endif; ?>
+        </ul>
+      </div>
+
+      <?php
+      // ====== 建築事業（architecture / architecture_category） ======
+      $architecture_archive = get_post_type_archive_link('architecture');
+      $is_arch_pta  = is_post_type_archive('architecture');
+      $is_arch_tax  = is_tax('architecture_category');
+      $current_arch_term_id = $is_arch_tax ? get_queried_object_id() : 0;
+
+      $architecture_terms = get_terms([
+        'taxonomy'   => 'architecture_category',
+        'hide_empty' => 1,
+        'orderby'    => 'name',
+        'order'      => 'ASC',
+      ]);
+      ?>
+      <div class="p-category-anchor__block">
+        <a href="<?php echo esc_url($architecture_archive); ?>"
+          class="p-category-anchor__list-title<?php echo $is_arch_pta ? ' is-current' : ''; ?>">
+          建築事業ALL
+        </a>
+        <ul class="p-category-anchor__lists">
+          <?php if (! is_wp_error($architecture_terms) && ! empty($architecture_terms)) : ?>
+            <?php foreach ($architecture_terms as $term) :
+              $url = get_term_link($term);
+              if (is_wp_error($url)) continue;
+              $active = ($is_arch_tax && $current_arch_term_id === $term->term_id) ? ' is-current' : '';
+            ?>
+              <li class="p-category-anchor__list">
+                <a href="<?php echo esc_url($url); ?>"
+                  class="p-category-anchor__link<?php echo $active; ?>"
+                  <?php echo $active ? 'aria-current="page"' : ''; ?>>
+                  - <?php echo esc_html($term->name); ?>
+                </a>
+              </li>
+            <?php endforeach; ?>
+          <?php endif; ?>
+        </ul>
+      </div>
+
+    </div>
   </div>
+
 
   <!-- <section class="p-archive p-archive--green">
     <div class="l-inner">

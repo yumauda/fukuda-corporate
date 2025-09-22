@@ -54,45 +54,63 @@
           <div class="p-top-works__slider">
             <!-- Slider main container -->
             <div class="swiper swiper1">
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
-                    </div>
-                  </div>
-                </div>
+                <?php
+                // すべてのタームを取得（投稿があるタームのみ表示したいので hide_empty=1）
+                $terms = get_terms([
+                  'taxonomy'   => 'engineer_category',
+                  'hide_empty' => 1,
+                  'orderby'    => 'name',
+                  'order'      => 'ASC',
+                ]);
 
+                // 画像が無い場合のフォールバック
+                $fallback = get_template_directory_uri() . '/images/common/slider_1.jpg';
+
+                if (! is_wp_error($terms) && ! empty($terms)) :
+                  foreach ($terms as $term) :
+                    // --- ACFの画像を取得（返り値：URL/ID/配列 どれでもOKに処理）
+                    // 推奨: ACF では $term をそのまま渡せます（互換で 'term_{id}' も試す）
+                    $img = get_field('slider_img', $term);
+                    if (! $img) $img = get_field('slider_img', 'term_' . $term->term_id);
+
+                    $src = '';
+                    if (is_array($img) && ! empty($img['url'])) {
+                      // 返り値=配列 の場合
+                      $src = isset($img['sizes']['large']) ? $img['sizes']['large'] : $img['url'];
+                    } elseif (is_numeric($img)) {
+                      // 返り値=ID の場合
+                      $tmp = wp_get_attachment_image_src($img, 'large');
+                      $src = $tmp ? $tmp[0] : '';
+                    } elseif (is_string($img)) {
+                      // 返り値=URL の場合
+                      $src = $img;
+                    }
+                    if (! $src) $src = $fallback;
+
+                    // タームアーカイブURL
+                    $link = get_term_link($term);
+                    if (is_wp_error($link)) $link = '#';
+                ?>
+                    <div class="swiper-slide">
+                      <a href="<?php echo esc_url($link); ?>" class="p-top-works__detail">
+                        <figure class="p-top-works__img">
+                          <img decoding="async" loading="lazy"
+                            src="<?php echo esc_url($src); ?>"
+                            alt="<?php echo esc_attr($term->name); ?>"
+                            width="420" height="280">
+                        </figure>
+                        <div class="p-top-works__detail-textWrapper">
+                          <p class="p-top-works__detail-text"><?php echo esc_html($term->name); ?></p>
+                        </div>
+                      </a>
+                    </div>
+                <?php endforeach;
+                endif; ?>
               </div>
+
               <div class="p-top-works__pagers">
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
                 <div class="p-top-works__pagers-buttons">
                   <div class="swiper-button-prev">
                     <div class="p-top-works__button-icon">
@@ -105,13 +123,10 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
               </div>
-
-
             </div>
+
           </div>
         </div>
         <div class="p-top-works__slider-wrapper">
@@ -123,44 +138,63 @@
           <div class="p-top-works__slider">
             <!-- Slider main container -->
             <div class="swiper swiper1">
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
+                <?php
+                // すべてのタームを取得（投稿があるタームのみ表示したいので hide_empty=1）
+                $terms = get_terms([
+                  'taxonomy'   => 'architecture_category',
+                  'hide_empty' => 1,
+                  'orderby'    => 'name',
+                  'order'      => 'ASC',
+                ]);
+
+                // 画像が無い場合のフォールバック
+                $fallback = get_template_directory_uri() . '/images/common/noimage.jpg';
+
+                if (! is_wp_error($terms) && ! empty($terms)) :
+                  foreach ($terms as $term) :
+                    // --- ACFの画像を取得（返り値：URL/ID/配列 どれでもOKに処理）
+                    // 推奨: ACF では $term をそのまま渡せます（互換で 'term_{id}' も試す）
+                    $img = get_field('slider_img', $term);
+                    if (! $img) $img = get_field('slider_img', 'term_' . $term->term_id);
+
+                    $src = '';
+                    if (is_array($img) && ! empty($img['url'])) {
+                      // 返り値=配列 の場合
+                      $src = isset($img['sizes']['large']) ? $img['sizes']['large'] : $img['url'];
+                    } elseif (is_numeric($img)) {
+                      // 返り値=ID の場合
+                      $tmp = wp_get_attachment_image_src($img, 'large');
+                      $src = $tmp ? $tmp[0] : '';
+                    } elseif (is_string($img)) {
+                      // 返り値=URL の場合
+                      $src = $img;
+                    }
+                    if (! $src) $src = $fallback;
+
+                    // タームアーカイブURL
+                    $link = get_term_link($term);
+                    if (is_wp_error($link)) $link = '#';
+                ?>
+                    <div class="swiper-slide">
+                      <a href="<?php echo esc_url($link); ?>" class="p-top-works__detail">
+                        <figure class="p-top-works__img">
+                          <img decoding="async" loading="lazy"
+                            src="<?php echo esc_url($src); ?>"
+                            alt="<?php echo esc_attr($term->name); ?>"
+                            width="420" height="280">
+                        </figure>
+                        <div class="p-top-works__detail-textWrapper">
+                          <p class="p-top-works__detail-text"><?php echo esc_html($term->name); ?></p>
+                        </div>
+                      </a>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="p-top-works__detail">
-                    <figure class="p-top-works__img">
-                      <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/slider_1.jpg" alt="" width="420" height="280">
-                    </figure>
-                    <div class="p-top-works__detail-textWrapper">
-                      <p class="p-top-works__detail-text">道路</p>
-                    </div>
-                  </div>
-                </div>
+                <?php endforeach;
+                endif; ?>
               </div>
+
               <div class="p-top-works__pagers">
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
                 <div class="p-top-works__pagers-buttons">
                   <div class="swiper-button-prev">
                     <div class="p-top-works__button-icon">
@@ -173,12 +207,10 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
               </div>
-
             </div>
+
           </div>
         </div>
       </div>
