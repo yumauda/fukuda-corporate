@@ -51,7 +51,7 @@
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/works_engineer_link.png" alt="" width="360" height="360">
             </a>
           </div>
-          <div class="p-top-works__slider">
+          <div class="p-top-works__slider js-works-engineer">
             <!-- Slider main container -->
             <div class="swiper swiper1">
               <div class="swiper-wrapper">
@@ -135,7 +135,7 @@
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/works_architecture_link.png" alt="" width="360" height="360">
             </a>
           </div>
-          <div class="p-top-works__slider">
+          <div class="p-top-works__slider js-works-architecture">
             <!-- Slider main container -->
             <div class="swiper swiper1">
               <div class="swiper-wrapper">
@@ -237,7 +237,7 @@
                 個々の成長が組織の信頼と品質を生み、地域への真の貢献につながると信じ、お客様・地域の皆様に寄り添いながら、技術と誠意で豊かな郷土づくりに貢献してまいります。</p>
             </div>
             <div class="p-detail__btn-wrapper">
-              <a href="#" class="p-detail__btn">
+              <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-detail__btn">
                 <p class="p-detail__btn-text">さらに詳しく</p>
                 <div class="p-detail__icon">
                   <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/btn_icon_arrow.png" alt="" width="15" height="12">

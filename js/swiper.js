@@ -1,4 +1,5 @@
 "use strict";
+
 const pad2 = n => String(n).padStart(2, '0');
 
 let swiper = new Swiper(".swiper1", {

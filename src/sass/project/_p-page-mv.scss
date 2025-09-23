@@ -6,9 +6,12 @@
 }
 
 .p-page-mv__content {
-  max-width: rem(1550);
   width: 100%;
   margin-left: auto;
+  max-width: rem(1300);
+  @include mq(lg) {
+    max-width: rem(1550);
+  }
 }
 
 .p-page-mv__detail {

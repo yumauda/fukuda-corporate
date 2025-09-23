@@ -87,6 +87,9 @@
   line-height: calc(54 / 24);
   font-size: rem(16);
   @include mq(md) {
+    font-size: rem(18);
+  }
+  @include mq(lg) {
     font-size: rem(24);
   }
 }
@@ -94,8 +97,11 @@
 .p-year__img {
   width: 100%;
   margin-top: rem(24);
-  @include mq(md) {
+  @include mq(md){
+    max-width: rem(700);
     margin-top: initial;
+  }
+  @include mq(lg) {
     max-width: rem(910);
   }
 }
