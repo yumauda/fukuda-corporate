@@ -208,19 +208,6 @@ jQuery(".p-drawer-icon").on("click", function (e) {
   jQuery(".p-drawer-background").toggleClass("is-active");
   return false;
 });
-window.addEventListener("scroll", function () {
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  var element = document.querySelector(".p-footer__floating");
-
-  if (window.innerWidth <= 768) {
-    // 768px以下のデバイスでのみ動作
-    if (scrollPosition > 700) {
-      element.style.opacity = "1";
-    } else {
-      element.style.opacity = "0";
-    }
-  }
-});
 window.onload = function () {
   document.body.classList.add("fade-in");
 };
@@ -265,22 +252,8 @@ jQuery(document).ready(function ($) {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var sel = document.getElementById("js-news-category");
-  if (!sel) return;
-
-  sel.addEventListener("change", function (e) {
-    var url = e.target.value;
-    if (url) {
-      window.location.href = url;
-    }
-  });
-});
-
 // スクロールロック（任意）
 document.documentElement.classList.remove("u-modal-open");
-
-
 
 // 開く
 jQuery(document).on("click", ".js-modal-btn", function (e) {
@@ -303,7 +276,7 @@ jQuery(document).on("click", ".js-modal-btn", function (e) {
     $splide.each(function () {
       if (this.__mounted) return;
       new Splide(this, {
-        type: "loop",
+        /* type: "loop", */
         perPage: 1,
         gap: 16,
         autoplay: true,
@@ -313,11 +286,11 @@ jQuery(document).on("click", ".js-modal-btn", function (e) {
         pagination: true,
         classes: {
           // 任意のクラスを上書きできる
-          pagination: 'splide__pagination c-pager',       // ← コンテナに追加したいクラス
-          page:       'splide__pagination__page c-pager__dot', // ← 各ページャー
-          arrows:     'splide__arrows c-arrows',
-          prev:       'splide__arrow--prev c-arrow c-arrow--prev',
-          next:       'splide__arrow--next c-arrow c-arrow--next',
+          pagination: "splide__pagination c-pager", // ← コンテナに追加したいクラス
+          page: "splide__pagination__page c-pager__dot", // ← 各ページャー
+          arrows: "splide__arrows c-arrows",
+          prev: "splide__arrow--prev c-arrow c-arrow--prev",
+          next: "splide__arrow--next c-arrow c-arrow--next",
         },
       }).mount();
       this.__mounted = true;
@@ -350,5 +323,3 @@ jQuery(document).on("keydown", function (e) {
     }
   }
 });
-
-

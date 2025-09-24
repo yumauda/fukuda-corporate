@@ -32,13 +32,17 @@
 }
 .splide__arrow--prev {
   left: rem(-16) !important;
+  top: 45% !important; 
   @include mq(md) {
+    top: 48% !important; 
     left: rem(-23) !important;
   }
 }
 .splide__arrow--next {
   right: rem(-16) !important;
+  top: 45% !important; 
   @include mq(md) {
+    top: 48% !important; 
     right: rem(-23) !important;
   }
 }

@@ -51,39 +51,33 @@ function my_script_init()
 	if (is_post_type_archive('engineer')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 	if (is_post_type_archive('architecture')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 	if (is_tax('architecture_category')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 	if (is_tax('engineer_category')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 	if (is_tax('engineer_tag')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 	if (is_tax('architecture_tag')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
-		wp_enqueue_script('splide-js', get_template_directory_uri() . '/js/splide.js', array('jquery'), filemtime(get_theme_file_path('/js/splide.js')), true);
 	}
 
-	if (is_front_page()) {
+	/* if (is_front_page()) {
 		wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', '', "1.0.1", true);
 		wp_enqueue_script('scrollTrigger', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', '', "1.0.1", true);
 		wp_enqueue_script('js-gsap', get_template_directory_uri() . '/js/gsap.js', array('jquery'), filemtime(get_theme_file_path('/js/gsap.js')), true);
-	}
+	} */
 	wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), filemtime(get_theme_file_path('/js/script.js')), true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
@@ -459,15 +453,3 @@ add_filter('body_class', function ($classes) {
 	}
 	return $classes;
 });
-function theme_enqueue_scripts()
-{
-	// 既存のenqueueがあればまとめて書く
-	wp_enqueue_script(
-		'news-category',
-		get_template_directory_uri() . '/js/news-category.js',
-		array(), // 依存がなければ空
-		null,    // バージョン
-		true     // フッターで読み込み
-	);
-}
-add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');

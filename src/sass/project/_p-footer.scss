@@ -23,8 +23,8 @@
   margin-left: auto;
   margin-right: auto;
   @include mq(md) {
-    max-width: rem(1400);
     display: flex;
+    max-width: rem(1400);
     gap: rem(200);
   }
 }
@@ -98,6 +98,10 @@
 }
 
 .p-footer__lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(16);
+  row-gap: rem(24);
   @include mq(md) {
     display: flex;
     gap: rem(64);
@@ -109,7 +113,6 @@
 .p-footer__list {
 }
 .p-footer__list + .p-footer__list {
-  margin-top: rem(16);
   @include mq(md) {
     margin-top: initial;
   }

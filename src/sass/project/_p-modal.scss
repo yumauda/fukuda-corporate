@@ -46,9 +46,9 @@
 .p-modal__close {
   position: absolute;
   cursor: pointer;
-  width: rem(40);
-  top: rem(-20);
-  right: rem(-20);
+  width: rem(32);
+  top: rem(-12);
+  right: rem(-12);
   @include mq(md) {
     top: rem(-32);
     right: rem(-32);

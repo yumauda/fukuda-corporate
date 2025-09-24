@@ -49,7 +49,7 @@
                                 <a href="<?php echo esc_url(home_url('/civil')); ?>" class="p-footer__sub-link">土木事業</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-footer__sub-link">建築事業</a>
+                                <a href="<?php echo esc_url(home_url('/arch')); ?>" class="p-footer__sub-link">建築事業</a>
                             </li>
                             <li class="p-footer__sub-list">
                                 <a href="<?php echo esc_url(home_url('/agri')); ?>" class="p-footer__sub-link">アグリ事業</a>
@@ -77,32 +77,32 @@
                         <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-footer__link">会社概要</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">会社概要</a>
+                                <a href="<?php echo esc_url(home_url('/company#company')); ?>" class="p-footer__sub-link">会社概要</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">認定登録一覧</a>
+                                <a href="<?php echo esc_url(home_url('/company#certification')); ?>" class="p-footer__sub-link">認定登録一覧</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">拠点情報</a>
+                                <a href="<?php echo esc_url(home_url('/company#office')); ?>" class="p-footer__sub-link">拠点情報</a>
                             </li>
                         </ul>
                     </li>
                     <li class="p-footer__list">
                         <a href="#" class="p-footer__link">新社屋のご案内</a>
-                        <a href="#" class="p-footer__link">私たちの取り組み</a>
+                        <a href="<?php echo esc_url(home_url('/sustainability')); ?>" class="p-footer__link">私たちの取り組み</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">SDGs</a>
+                                <a href="<?php echo esc_url(home_url('/sustainability#sdgs')); ?>" class="p-footer__sub-link">SDGs</a>
                             </li>
                             <li class="p-footer__sub-list">
-                                <a href="#" class="p-footer__sub-link">フクダ共創サイクル</a>
+                                <a href="<?php echo esc_url(home_url('/sustainability#cycle')); ?>" class="p-footer__sub-link">フクダ共創サイクル</a>
                             </li>
                         </ul>
                     </li>
                     <li class="p-footer__list">
                         <a href="<?php echo esc_url(home_url('/news')); ?>" class="p-footer__link">お知らせ</a>
-                        <a href="#" class="p-footer__link">採用情報</a>
-                        <a href="#" class="p-footer__link">お問い合わせ</a>
+                        <a href="<?php echo esc_url(home_url('/recruit')); ?>" class="p-footer__link">採用情報</a>
+                        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="p-footer__link">お問い合わせ</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
                                 <a href="<?php echo esc_url(home_url('/privacy')); ?>" class="p-footer__sub-link">個人情報保護方針</a>

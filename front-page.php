@@ -257,7 +257,7 @@
   <section class="p-us">
     <div class="l-inner">
       <div class="p-us__content">
-        <a href="" class="p-us__link">
+        <a href="<?php echo esc_url(home_url('/sustainability')); ?>" class="p-us__link">
           <div class="p-us__detail">
             <div class="p-us__left">
               <div class="p-us__block">
@@ -286,7 +286,7 @@
         <div class="p-recruit__detail">
           <h2 class="p-recruit__title">採用特設サイト</h2>
           <div class="p-recruit__btn-wrapper">
-            <a href="#" class="p-recruit__btn">一緒に町を作ってみる？</a>
+            <a href="<?php echo esc_url(home_url('/recruit')); ?>" class="p-recruit__btn">一緒に町を作ってみる？</a>
           </div>
         </div>
       </div>
@@ -314,39 +314,44 @@
         </div>
         <div class="p-top-new__right">
           <ul class="p-top-news__lists">
-            <li class="p-top-news__list">
-              <a href="#" class="p-top-news__list-link">
-                <div class="p-top-news__meta">
-                  <span class="p-top-news__category">TOPICS</span>
-                  <time datetime="2025.00.00" class="p-top-news__time">2025.00.00</time>
-                </div>
-                <p class="p-top-news__list-title">
-                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </a>
-            </li>
-            <li class="p-top-news__list">
-              <a href="#" class="p-top-news__list-link">
-                <div class="p-top-news__meta">
-                  <span class="p-top-news__category">TOPICS</span>
-                  <time datetime="2025.00.00" class="p-top-news__time">2025.00.00</time>
-                </div>
-                <p class="p-top-news__list-title">
-                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </a>
-            </li>
-            <li class="p-top-news__list">
-              <a href="#" class="p-top-news__list-link">
-                <div class="p-top-news__meta">
-                  <span class="p-top-news__category">TOPICS</span>
-                  <time datetime="2025.00.00" class="p-top-news__time">2025.00.00</time>
-                </div>
-                <p class="p-top-news__list-title">
-                  お知らせタイトルが入ります。ダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </a>
-            </li>
+            <?php
+            // パラメータの設定
+            $args = array(
+              'posts_per_page' => 3,
+              'post_status' => 'publish',
+              'post_type' => 'post',
+              'orderby' => 'date',
+            );
+
+            // WP_Queryインスタンスの生成
+            $my_query = new WP_Query($args);
+            if ($my_query->have_posts()) :
+              while ($my_query->have_posts()) : $my_query->the_post();
+            ?>
+
+                <li class="p-top-news__list">
+                  <a href="<?php the_permalink(); ?>" class="p-top-news__list-link">
+                    <div class="p-top-news__meta">
+                      <?php 
+                        $categories = get_the_category();
+                        if (!empty($categories)) {
+                          echo '<span class="p-top-news__category">' . esc_html($categories[0]->name) . '</span>';
+                        }
+                      ?>
+                      <time datetime="<?php the_time('Y.m.d'); ?>" class="p-top-news__time"><?php the_time('Y.m.d'); ?></time>
+                    </div>
+                    <p class="p-top-news__list-title">
+                      <?php the_title(); ?>
+                    </p>
+                  </a>
+                </li>
+
+            <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+            ?>
+
           </ul>
         </div>
       </div>
