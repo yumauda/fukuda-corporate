@@ -5222,11 +5222,19 @@ input::placeholder {
 }
 
 .p-news__content {
-  max-width: 1400px;
-  max-width: 87.5rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .p-news__content {
+    max-width: 75rem;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-news__content {
+    max-width: 87.5rem;
+  }
 }
 
 .p-news__select {

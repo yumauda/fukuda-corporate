@@ -276,7 +276,6 @@ jQuery(document).on("click", ".js-modal-btn", function (e) {
     $splide.each(function () {
       if (this.__mounted) return;
       new Splide(this, {
-        /* type: "loop", */
         perPage: 1,
         gap: 16,
         autoplay: true,

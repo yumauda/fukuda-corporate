@@ -20,7 +20,7 @@
               </a>
             </li>
             <li class="p-page-mv__list">
-              <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-page-mv__link">
+              <a href="<?php echo esc_url(home_url('/arch')); ?>" class="p-page-mv__link">
                 <p class="p-page-mv__link-text">建築事業</p>
                 <div class="p-page-mv__icon">
                   <img src="<?php echo get_template_directory_uri() ?>/images/common/page_mv_icon.png" alt="" width="30" height="30">

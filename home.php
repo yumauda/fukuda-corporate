@@ -165,19 +165,7 @@
           </div>
         <?php endif; ?>
 
-        <!-- <div class="p-news__pagination">
-          <a href="#" class="p-news__pagination-link">
-            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_prev.png" alt="" width="24" height="24">
-          </a>
-          <a href="#" class="p-news__pagination-link current">1</a>
-          <a href="#" class="p-news__pagination-link">2</a>
-          <a href="#" class="p-news__pagination-link">3</a>
-          <a href="#" class="p-news__pagination-link">4</a>
-          <a href="#" class="p-news__pagination-link">5</a>
-          <a href="#" class="p-news__pagination-link">
-            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_next.png" alt="" width="24" height="24">
-          </a>
-        </div> -->
+        
       </div>
     </div>
   </div>
