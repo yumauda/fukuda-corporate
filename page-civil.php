@@ -89,7 +89,7 @@
         </div>
         <ul class="p-kind__lists">
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--2">
+            <a href="<?php echo esc_url(home_url('/engineer_category/road/')); ?>" class="p-kind__link p-kind__link--2">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -114,7 +114,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link">
+            <a href="<?php echo esc_url(home_url('/engineer_category/bridge/')); ?>" class="p-kind__link">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -139,7 +139,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--3">
+            <a href="<?php echo esc_url(home_url('/engineer_category/river/')); ?>" class="p-kind__link p-kind__link--3">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -164,7 +164,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--4">
+            <a href="<?php echo esc_url(home_url('/engineer_category/tunnel/')); ?>" class="p-kind__link p-kind__link--4">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -189,7 +189,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--5">
+            <a href="<?php echo esc_url(home_url('/engineer_category/railway/')); ?>" class="p-kind__link p-kind__link--5">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -214,7 +214,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--6">
+            <a href="<?php echo esc_url(home_url('/engineer_category/harbor/')); ?>" class="p-kind__link p-kind__link--6">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
