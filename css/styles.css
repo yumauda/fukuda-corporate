@@ -1620,7 +1620,7 @@ select::-ms-expand {
   .p-drawer-icon__bars {
     gap: 0.5rem;
     width: 1.25rem;
-    height: 0.75rem;
+    height: 0.8125rem;
   }
 }
 
@@ -8756,7 +8756,7 @@ input::placeholder {
 }
 
 .c-main-title__en {
-  font-weight: 900;
+  /*   font-weight: 900; */
   color: #00a040;
   display: block;
   font-family: "lato", sans-serif;
