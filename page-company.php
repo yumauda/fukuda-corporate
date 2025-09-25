@@ -93,7 +93,7 @@
     <div class="l-inner">
       <div class="p-philosophy__content">
         <h2 class="p-philosophy__title">
-          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/philosophy_logo.png" alt="論語" width="476" height="463">
+          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/philosophy_logo.svg" alt="論語" width="476" height="463">
         </h2>
         <div class="p-philosophy__block">
           <div class="p-philosophy__text-wrapper">

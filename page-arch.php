@@ -88,7 +88,7 @@
         </div>
         <ul class="p-kind__lists">
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--7">
+            <a href="<?php echo esc_url(home_url('/architecture_category/commercial/')); ?>" class="p-kind__link p-kind__link--7">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -113,7 +113,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--8">
+            <a href="<?php echo esc_url(home_url('/architecture_category/education/')); ?>" class="p-kind__link p-kind__link--8">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--9">
+            <a href="<?php echo esc_url(home_url('/architecture_category/medical/')); ?>" class="p-kind__link p-kind__link--9">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -163,7 +163,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--10">
+            <a href="<?php echo esc_url(home_url('/architecture_category/facility/')); ?>" class="p-kind__link p-kind__link--10">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -188,7 +188,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--11">
+            <a href="<?php echo esc_url(home_url('/architecture_category/office/')); ?>" class="p-kind__link p-kind__link--11">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -213,7 +213,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--12">
+            <a href="<?php echo esc_url(home_url('/architecture_category/house/')); ?>" class="p-kind__link p-kind__link--12">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -238,7 +238,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--13">
+            <a href="<?php echo esc_url(home_url('/architecture_category/local/')); ?>" class="p-kind__link p-kind__link--13">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
@@ -263,7 +263,7 @@
             </a>
           </li>
           <li class="p-kind__list">
-            <a href="#" class="p-kind__link p-kind__link--14">
+            <a href="<?php echo esc_url(home_url('/architecture_category/tradition/')); ?>" class="p-kind__link p-kind__link--14">
               <div class="p-number__top-wrapper">
                 <div class="p-kind__number">
                   <p class="p-kind__number-en">category</p>
