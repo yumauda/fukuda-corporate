@@ -87,12 +87,12 @@
                             </a>
                         </li>
                         <li class="p-header__list">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__link">
+                            <a href="<?php echo esc_url(home_url('/#works')); ?>" class="p-header__link">
                                 <span class="p-header__link-text">施工実績</span>
                             </a>
                         </li>
                         <li class="p-header__list">
-                            <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-header__link">
+                            <a href="<?php echo esc_url(home_url('/company#company')); ?>" class="p-header__link">
                                 <span class="p-header__link-text">会社概要</span>
                             </a>
                         </li>
