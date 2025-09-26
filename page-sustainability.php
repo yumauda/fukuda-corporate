@@ -63,8 +63,8 @@
       <div class="p-sdgs__content">
         <div class="p-sdgs__title">
           <h2 class="c-intro-title">
-            <span class="c-intro-title__en c-intro-title__en--white">Co-creation cycle</span>
-            <span class="c-intro-title__ja c-intro-title__ja--white">フクダ共創サイクル</span>
+            <span class="c-intro-title__en c-intro-title__en--white">SDGs</span>
+            <span class="c-intro-title__ja c-intro-title__ja--white">SDGsの達成に向けた取り組み</span>
           </h2>
         </div>
         <div class="p-sdgs__block-wrapper">
