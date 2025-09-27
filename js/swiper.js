@@ -31,12 +31,10 @@ let swiper = new Swiper(".swiper1", {
     formatFractionCurrent: pad2,
     formatFractionTotal: pad2,
   },
-
-  // 細い進捗バー（スクショ風）
   scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
+    el: ".swiper-scrollbar",
   },
+
 });
 
 
