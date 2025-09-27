@@ -63,7 +63,7 @@
     <!-- css -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <?php if (is_404()) : ?>
         <meta http-equiv="refresh" content=" 3; url=<?php echo esc_url(home_url("/")); ?>">
     <?php endif; ?>
@@ -158,9 +158,9 @@
                             <li class="p-drawer-content__list">
                                 <a href="<?php echo esc_url(home_url('/contact')); ?>" class="p-drawer-content__link">お問い合わせ</a>
                             </li>
-                            
+
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>

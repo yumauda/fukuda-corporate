@@ -8440,27 +8440,32 @@ input::placeholder {
 
 .p-us__link {
   width: 100%;
-  background: url(../images/common/us_bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   border-top-left-radius: 30px;
   border-top-left-radius: 1.875rem;
   padding-left: 20px;
   padding-left: 1.25rem;
   padding-right: 20px;
   padding-right: 1.25rem;
-  padding-top: 60px;
-  padding-top: 3.75rem;
-  padding-bottom: 40px;
-  padding-bottom: 2.5rem;
+  padding-top: 40px;
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
   display: block;
+  position: relative;
+  aspect-ratio: 335/476;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="10" /><feOffset dx="1" dy="1" result="offsetblur" /><feFlood flood-color="rgba(0,0,0,0.05)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, .05));
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, .05));
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .p-us__link {
+    aspect-ratio: 1400/350;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
+    height: initial;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -8474,6 +8479,24 @@ input::placeholder {
   }
 }
 
+.p-us__link::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/us_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  inset: 0;
+}
+
+.p-us__detail {
+  position: relative;
+  z-index: 2;
+}
 @media screen and (min-width: 768px) {
   .p-us__detail {
     display: -webkit-box;
