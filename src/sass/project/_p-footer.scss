@@ -176,3 +176,6 @@
 .p-footer__sub-list--big + .p-footer__sub-list--big {
   margin-top: rem(22);
 }
+.p-footer__link--none {
+  pointer-events: none;
+}

@@ -25,7 +25,7 @@ let swiper = new Swiper(".swiper1", {
     type: 'fraction',
     renderFraction: (currentClass, totalClass) => (
       `<span class="pag-current ${currentClass}"></span>` +
-      `<span class="pag-slash">/</span>` +
+      `<span class="pag-slash"> / </span>` +
       `<span class="pag-total ${totalClass}"></span>`
     ),
     formatFractionCurrent: pad2,

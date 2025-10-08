@@ -7,7 +7,7 @@
           <div class="p-page-mv__title">
             <h1 class="c-main-title">
               <span class="c-main-title__en">Company</span>
-              <span class="c-main-title__ja">会社案内</span>
+              <span class="c-main-title__ja">会社概要</span>
             </h1>
           </div>
 

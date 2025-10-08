@@ -257,7 +257,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .l-inner {
-    max-width: 1200px;
+    max-width: 1150px;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -1293,9 +1293,21 @@ select::-ms-expand {
 }
 
 .p-detail-img {
-  height: 100dvh;
   position: sticky;
   top: 0;
+  height: 100dvh;
+  -webkit-transition: -webkit-filter 0.8s ease;
+  transition: -webkit-filter 0.8s ease;
+  transition: filter 0.8s ease;
+  transition: filter 0.8s ease, -webkit-filter 0.8s ease;
+  will-change: filter;
+  z-index: 0; /* 背景として背面に */
+}
+
+.p-detail-img.is-blurred {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="8" /></filter></svg>#filter');
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
 }
 
 .p-detail-img img {
@@ -1303,40 +1315,19 @@ select::-ms-expand {
   height: 100dvh;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  -o-object-position: center;
+     object-position: center;
 }
 
+/* セクション側は画像より前に出す */
 .p-detail {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   inset: 0;
   padding-top: 200px;
   padding-top: 12.5rem;
   padding-bottom: 100px;
   padding-bottom: 6.25rem;
-}
-@media screen and (min-width: 768px) {
-  .p-detail {
-    padding-top: 25rem;
-    padding-bottom: 12.5rem;
-  }
-}
-
-.p-detail::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .3))), rgba(0, 0, 0, .3);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .3) 100%), rgba(0, 0, 0, .3);
-  --fade-top: 120px;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, .4)), to(#000));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .4) calc(var(--fade-top) * 0.5), #000 var(--fade-top));
-  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, .6)), to(#000));
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .6) calc(var(--fade-top) * 0.5), #000 var(--fade-top));
-  pointer-events: none;
 }
 
 .p-detail__content {
@@ -2089,6 +2080,10 @@ select::-ms-expand {
 .p-footer__sub-list--big + .p-footer__sub-list--big {
   margin-top: 22px;
   margin-top: 1.375rem;
+}
+
+.p-footer__link--none {
+  pointer-events: none;
 }
 
 .p-form__row-wrapper {
@@ -5025,6 +5020,17 @@ input::placeholder {
   left: 0;
   width: 100%;
   height: 100dvh;
+  -webkit-transition: -webkit-filter 0.8s ease;
+  transition: -webkit-filter 0.8s ease;
+  transition: filter 0.8s ease;
+  transition: filter 0.8s ease, -webkit-filter 0.8s ease;
+  position: fixed;
+}
+
+.p-mv.is-blurred {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="8" /></filter></svg>#filter');
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
 }
 
 .p-mv__inner {
@@ -5032,7 +5038,7 @@ input::placeholder {
 }
 
 .p-mv__content {
-  position: fixed;
+  /*   position: fixed; */
   height: inherit;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -5046,7 +5052,7 @@ input::placeholder {
   height: inherit;
 }
 
-.p-mv__img img {
+.p-mv__img video {
   aspect-ratio: 1920/1080;
   -o-object-fit: cover;
      object-fit: cover;
@@ -6001,6 +6007,7 @@ input::placeholder {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  mix-blend-mode: screen;
 }
 
 .p-philosophy__block {
@@ -8302,9 +8309,11 @@ input::placeholder {
 }
 
 .p-top-works__detail-textWrapper {
+  position: relative;
   background: rgba(0, 160, 64, .7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  mix-blend-mode: multiply;
   padding: 16px;
   padding: 1rem;
   position: absolute;
@@ -8325,6 +8334,8 @@ input::placeholder {
   width: 100%;
   font-size: 16px;
   font-size: 1rem;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .p-top-works__detail-text {
@@ -8608,28 +8619,13 @@ input::placeholder {
   padding-top: 12.5rem;
   padding-bottom: 100px;
   padding-bottom: 6.25rem;
+  margin-top: 100dvh;
 }
 @media screen and (min-width: 768px) {
   .p-year {
     padding-top: 25rem;
     padding-bottom: 12.5rem;
   }
-}
-
-.p-year::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .3))), rgba(0, 0, 0, .3);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .3) 100%), rgba(0, 0, 0, .3);
-  --fade-top: 120px;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, .4)), to(#000));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .4) calc(var(--fade-top) * 0.5), #000 var(--fade-top));
-  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, .6)), to(#000));
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .6) calc(var(--fade-top) * 0.5), #000 var(--fade-top));
-  pointer-events: none;
 }
 
 .p-year__content {

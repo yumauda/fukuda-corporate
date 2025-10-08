@@ -25,7 +25,47 @@
   <div class="p-news">
     <div class="l-inner">
       <div class="p-news__content">
+        <div class="p-news__select">
+          <?php
+          // いま表示しているタクソノミーを判定（通常: category / 例: news_category）
+          $qo = get_queried_object();
+          $taxonomy = (isset($qo->taxonomy) && taxonomy_exists($qo->taxonomy)) ? $qo->taxonomy : 'category';
 
+          // 現在のタームID（「すべて」の時は 0）
+          $current_term_id = (isset($qo->term_id) && $qo instanceof WP_Term) ? (int) $qo->term_id : 0;
+
+          // 「すべて」へのURL
+          // 投稿（post）の一覧ページを使う場合：
+          $all_url = get_permalink(get_option('page_for_posts'));
+          // もし「ニュース」等のカスタム投稿タイプのアーカイブに戻したいなら：
+          // $all_url = get_post_type_archive_link('news'); // ←サイトに合わせて変更
+
+          // セレクトに出すカテゴリー一覧
+          $cats = get_terms(array(
+            'taxonomy'   => $taxonomy,
+            'hide_empty' => true,   // 必要に応じて false
+          ));
+
+          if (is_wp_error($cats)) {
+            $cats = array(); // 念のため安全側
+          }
+          ?>
+
+          <select id="js-news-category" class="p-news__select-input">
+            <option value="<?php echo esc_url($all_url); ?>" <?php selected(0, $current_term_id); ?>>すべて</option>
+            <?php if (! empty($cats)) : ?>
+              <?php foreach ($cats as $cat) :
+                $url = get_term_link($cat);
+                if (is_wp_error($url)) continue;
+              ?>
+                <option value="<?php echo esc_url($url); ?>" <?php selected($cat->term_id, $current_term_id); ?>>
+                  <?php echo esc_html($cat->name); ?>
+                </option>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </select>
+
+        </div>
         <ul class="p-news__lists">
           <?php if (have_posts()) : ?>
             <?php while (have_posts()) : ?>
@@ -129,19 +169,7 @@
           </div>
         <?php endif; ?>
 
-        <!-- <div class="p-news__pagination">
-          <a href="#" class="p-news__pagination-link">
-            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_prev.png" alt="" width="24" height="24">
-          </a>
-          <a href="#" class="p-news__pagination-link current">1</a>
-          <a href="#" class="p-news__pagination-link">2</a>
-          <a href="#" class="p-news__pagination-link">3</a>
-          <a href="#" class="p-news__pagination-link">4</a>
-          <a href="#" class="p-news__pagination-link">5</a>
-          <a href="#" class="p-news__pagination-link">
-            <img src="<?php echo get_template_directory_uri() ?>/images/common/news_pagination_arrow_next.png" alt="" width="24" height="24">
-          </a>
-        </div> -->
+
       </div>
     </div>
   </div>

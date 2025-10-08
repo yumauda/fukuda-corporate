@@ -116,8 +116,10 @@
   display: block;
 }
 .p-top-works__detail-textWrapper {
+  position: relative;
   background: rgba($color: #00a040, $alpha: 0.7);
   backdrop-filter: blur(10px);
+  mix-blend-mode: multiply;
   padding: rem(16);
   position: absolute;
   width: 100%;
@@ -134,6 +136,8 @@
   letter-spacing: 0.05em;
   width: 100%;
   font-size: rem(16);
+  position: relative;
+  z-index: 1;
   @include mq(md) {
     font-size: rem(24);
   }
@@ -188,4 +192,3 @@
   font-weight: 700;
   letter-spacing: 0.05em;
 }
-

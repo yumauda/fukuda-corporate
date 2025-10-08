@@ -3,9 +3,10 @@
   <section class="p-mv">
     <div class="p-mv__inner">
       <div class="p-mv__content">
-        <figure class="p-mv__img">
-          <img src="<?php echo get_template_directory_uri() ?>/images/common/mv_pc.png" alt="人を想いまちを築く" width="1920" height="1080">
-        </figure>
+        <div class="p-mv__img">
+          <video src="<?php echo get_template_directory_uri() ?>/images/common/mv_pc.mp4" autoplay loop muted playsinline></video>
+          <!-- <img src="<?php echo get_template_directory_uri() ?>/images/common/mv_pc.png" alt="人を想いまちを築く" width="1920" height="1080"> -->
+        </div>
         <h1 class="p-mv__title">
           <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/mv_title.png" alt="" width="800" height="600">
         </h1>
@@ -238,7 +239,7 @@
             </div>
             <div class="p-detail__btn-wrapper">
               <a href="<?php echo esc_url(home_url('/company')); ?>" class="p-detail__btn">
-                <p class="p-detail__btn-text">さらに詳しく</p>
+                <p class="p-detail__btn-text">会社概要</p>
                 <div class="p-detail__icon">
                   <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/btn_icon_arrow.png" alt="" width="15" height="12">
                 </div>

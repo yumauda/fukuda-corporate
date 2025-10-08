@@ -42,7 +42,7 @@
             <div class="p-footer__right">
                 <ul class="p-footer__lists">
                     <li class="p-footer__list">
-                        <a href="#" class="p-footer__link">事業内容</a>
+                        <a href="#" class="p-footer__link p-footer__link--none">事業内容</a>
                         <ul class="p-footer__sub-lists">
 
                             <li class="p-footer__sub-list">
@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                     <li class="p-footer__list">
-                        <a href="#" class="p-footer__link">施工実績</a>
+                        <a href="#" class="p-footer__link p-footer__link--none">施工実績</a>
                         <ul class="p-footer__sub-lists">
                             <li class="p-footer__sub-list">
                                 <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-footer__sub-link">土木事業</a>

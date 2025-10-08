@@ -322,3 +322,53 @@ jQuery(document).on("keydown", function (e) {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mv = document.querySelector(".p-mv");
+  const year = document.querySelector(".p-year");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          mv.classList.add("is-blurred");
+        } else {
+          mv.classList.remove("is-blurred");
+        }
+      });
+    },
+    {
+      root: null, // ビューポート基準
+      threshold: 0.2, // 20%見えたらトリガー
+    }
+  );
+
+  if (year) observer.observe(year);
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const stickyImage = document.querySelector(".p-detail-img"); // ← ぼかす対象
+  const triggerSection = document.querySelector(".p-detail");  // ← 交差監視対象
+
+  // 念のため初期化
+  stickyImage?.classList.remove("is-blurred");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          stickyImage.classList.add("is-blurred");
+        } else {
+          stickyImage.classList.remove("is-blurred");
+        }
+      });
+    },
+    {
+      // 画面下から寄ってきたときに少し早めに発火
+      root: null,
+      threshold: 0.0,
+      rootMargin: "0px 0px -50% 0px", // 下側を詰めて早めにON
+    }
+  );
+
+  if (triggerSection) observer.observe(triggerSection);
+});

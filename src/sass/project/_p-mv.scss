@@ -6,14 +6,19 @@
   left: 0;
   width: 100%;
   height: 100dvh;
+  transition: filter 0.8s ease;
+  position: fixed;
 }
 
+.p-mv.is-blurred {
+  filter: blur(8px);
+}
 .p-mv__inner {
   height: inherit;
 }
 
 .p-mv__content {
-  position: fixed;
+/*   position: fixed; */
   height: inherit;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -26,7 +31,7 @@
   width: 100vw;
   height: inherit;
 }
-.p-mv__img img {
+.p-mv__img video {
   aspect-ratio: 1920 / 1080;
   object-fit: cover;
   width: 100%;

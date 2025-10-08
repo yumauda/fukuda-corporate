@@ -51,6 +51,9 @@ function my_script_init()
 	if (is_home()) {
 		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/news-category.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
 	}
+	if (is_category()) {
+		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/news-category.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
+	}
 	if (is_post_type_archive('engineer')) {
 		wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css', array(), null, 'all');
 		wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js', array(), null, true);
