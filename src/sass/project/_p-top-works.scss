@@ -188,7 +188,10 @@
 .pag-total {
   color: #242424;
   font-family: $outfit;
-  font-size: rem(18);
   font-weight: 700;
   letter-spacing: 0.05em;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }

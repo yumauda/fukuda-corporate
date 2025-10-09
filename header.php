@@ -81,15 +81,87 @@
                 </div>
                 <nav class="p-header__nav">
                     <ul class="p-header__lists">
-                        <li class="p-header__list">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__link">
+                        <li class="p-header__list p-header__list--none">
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__link p-header__link--none">
                                 <span class="p-header__link-text">事業内容</span>
                             </a>
+                            <ul class="p-header__mega">
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/civil')); ?>" class="p-header__mega-link">土木事業</a>
+                                </li>
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/arch')); ?>" class="p-header__mega-link">建築事業</a>
+                                </li>
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/agri')); ?>" class="p-header__mega-link">アグリ事業</a>
+                                </li>
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/solar')); ?>" class="p-header__mega-link">ソーラー発電事業</a>
+                                </li>
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/estate')); ?>" class="p-header__mega-link">不動産事業</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="p-header__list">
+                        <li class="p-header__list p-header__list--none">
                             <a href="<?php echo esc_url(home_url('/#works')); ?>" class="p-header__link">
                                 <span class="p-header__link-text">施工実績</span>
                             </a>
+                            <ul class="p-header__mega p-header__mega--flex">
+                                <li class="p-header__mega-list">
+                                    <a href="<?php echo esc_url(home_url('/engineer')); ?>" class="p-header__mega-link">土木事業</a>
+                                    <ul class="p-header__small-lists">
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/road/')); ?>" class="p-header__small-link">道路</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/bridge/')); ?>" class="p-header__small-link">橋梁</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/river/')); ?>" class="p-header__small-link">河川</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/tunnel/')); ?>" class="p-header__small-link">トンネル</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/railway/')); ?>" class="p-header__small-link">鉄道</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/engineer_category/harbor/')); ?>" class="p-header__small-link">湾港</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="p-header__mega-list p-header__mega-list--mtnone">
+                                    <a href="<?php echo esc_url(home_url('/architecture')); ?>" class="p-header__mega-link">建築事業</a>
+                                    <ul class="p-header__small-lists">
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/commercial/')); ?>" class="p-header__small-link">商業施設</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/education/')); ?>" class="p-header__small-link">教育施設</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/medical/')); ?>" class="p-header__small-link">医療・福祉施設</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/facility/')); ?>" class="p-header__small-link">工場</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/office/')); ?>" class="p-header__small-link">オフィス</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/house/')); ?>" class="p-header__small-link">住宅</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/local/')); ?>" class="p-header__small-link">地域開発</a>
+                                        </li>
+                                        <li class="p-header__small-list">
+                                            <a href="<?php echo esc_url(home_url('/architecture_category/tradition/')); ?>" class="p-header__small-link">伝統建造物</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
                         </li>
                         <li class="p-header__list">
                             <a href="<?php echo esc_url(home_url('/company#company')); ?>" class="p-header__link">

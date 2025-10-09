@@ -31,9 +31,26 @@
               100年先のまちが、<br class="u-mobile">「ここにあってよかった」と思えるように。</p>
           </div>
         </div>
-        <figure class="p-year__img">
-          <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_img.png" alt="" width="910" height="997">
-        </figure>
+        <div class="p-year__right-wrapper">
+          <a href="" class="p-year__btn-img p-year__btn-img1">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_1.png" alt="土木事業" width="431" height="38">
+          </a>
+          <a href="" class="p-year__btn-img p-year__btn-img2">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_2.png" alt="建築事業" width="431" height="38">
+          </a>
+          <a href="" class="p-year__btn-img p-year__btn-img3">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_3.png" alt="アグリ事業" width="431" height="38">
+          </a>
+          <a href="" class="p-year__btn-img p-year__btn-img4">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_4.png" alt="ソーラー発電事業" width="431" height="38">
+          </a>
+          <a href="" class="p-year__btn-img p-year__btn-img5">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_5.png" alt="不動産事業" width="431" height="38">
+          </a>
+          <!-- <figure class="p-year__img">
+            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/year_img.png" alt="" width="910" height="997">
+          </figure> -->
+        </div>
       </div>
     </div>
   </section>

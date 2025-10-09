@@ -5,11 +5,11 @@
   z-index: 2;
   inset: 0;
   padding-top: rem(200);
-  padding-bottom: rem(100);
+  padding-bottom: rem(400);
   margin-top: 100dvh;
   @include mq(md) {
     padding-top: rem(400);
-    padding-bottom: rem(200);
+    padding-bottom: rem(400);
   }
 }
 
@@ -63,17 +63,141 @@
     font-size: rem(24);
   }
 }
-
-.p-year__img {
+.p-year__right-wrapper {
+  max-width: rem(336);
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: rem(24);
-  @include mq(md){
-    max-width: rem(700);
-    margin-top: initial;
+  position: relative;
+  @include mq(md) {
+    max-width: rem(508);
+    margin-left: auto;
+    margin-top: rem(-700);
   }
   @include mq(lg) {
     max-width: rem(910);
+    margin-top: rem(-1000);
   }
+}
+.p-year__right-wrapper::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/year_img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  aspect-ratio: 910 / 997;
+  object-fit: cover;
+}
+.p-year__btn-img {
+  display: inline-block;
+}
+.p-year__btn-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-year__btn-img1 {
+  width: rem(64);
+  position: absolute;
+  top: rem(60);
+  left: rem(40);
+  @include mq(md) {
+    width: rem(120);
+    position: absolute;
+    top: rem(80);
+    left: rem(72);
+  }
+  @include mq(lg) {
+    width: rem(180);
+    position: absolute;
+    top: rem(125);
+    left: rem(230);
+  }
+}
+
+.p-year__btn-img2 {
+  width: rem(64);
+  position: absolute;
+  top: rem(60);
+  right: rem(40);
+  @include mq(md) {
+    position: absolute;
+    width: rem(120);
+    top: rem(80);
+    right: rem(72);
+  }
+  @include mq(lg) {
+    width: rem(180);
+    top: rem(125);
+    right: rem(230);
+  }
+}
+
+.p-year__btn-img3 {
+  width: rem(48);
+  top: rem(220);
+  left: rem(20);
+  position: absolute;
+  @include mq(md) {
+    width: rem(100);
+    position: absolute;
+    left: rem(60);
+    top: rem(360);
+  }
+  @include mq(lg) {
+    width: rem(114);
+    left: rem(120);
+    top: rem(680);
+  }
+}
+
+.p-year__btn-img4 {
+  width: rem(80);
+  position: absolute;
+  left: 50%;
+  top: rem(240);
+  transform: translateX(-50%);
+  @include mq(md) {
+    width: rem(150);
+    top: rem(380);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include mq(lg) {
+    width: rem(180);
+    top: rem(700);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p-year__btn-img5 {
+  width: rem(48);
+  top: rem(220);
+  right: rem(20);
+  position: absolute;
+  @include mq(md) {
+    position: absolute;
+    width: rem(100);
+    top: rem(360);
+    right: rem(60);
+  }
+  @include mq(lg) {
+    width: rem(120);
+    top: rem(680);
+    right: rem(120);
+  }
+}
+
+.p-year__img {
 }
 .p-year__img img {
   width: 100%;

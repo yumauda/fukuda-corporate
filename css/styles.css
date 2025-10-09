@@ -20,10 +20,9 @@ body {
   }
 }
 
-body.drawer-open {
+/* body.drawer-open {
   overflow: hidden;
-}
-
+} */
 body {
   -webkit-text-size-adjust: 100%;
 }
@@ -2921,6 +2920,14 @@ input::placeholder {
   }
 }
 
+.p-header__list {
+  position: relative;
+}
+
+.p-header__link--none {
+  pointer-events: none;
+}
+
 .p-header__link-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3036,6 +3043,93 @@ input::placeholder {
 
 .p-header__drawer {
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .p-header__mega {
+    position: absolute;
+    background: #302a28;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 175%;
+    width: 17.5rem;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-header__mega--flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 22.5rem;
+  }
+}
+
+.p-header__list--none:hover .p-header__mega {
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-header__mega-list + .p-header__mega-list {
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+.p-header__mega-list--mtnone {
+  margin-top: 0 !important;
+  margin-top: initial !important;
+}
+
+.p-header__mega-link {
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.p-header__small-lists {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+.p-header__small-list + .p-header__small-list {
+  margin-top: 12px;
+  margin-top: 0.75rem;
+}
+
+.p-header__small-list {
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.p-header__small-list::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 12px;
+  width: 0.75rem;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.p-header__small-link {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #fff;
 }
 
 .p-history {
@@ -8419,10 +8513,17 @@ input::placeholder {
 .pag-total {
   color: #242424;
   font-family: "outfit", sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .pag-current,
+  .pag-slash,
+  .pag-total {
+    font-size: 1.125rem;
+  }
 }
 
 .p-us {
@@ -8617,14 +8718,14 @@ input::placeholder {
   inset: 0;
   padding-top: 200px;
   padding-top: 12.5rem;
-  padding-bottom: 100px;
-  padding-bottom: 6.25rem;
+  padding-bottom: 400px;
+  padding-bottom: 25rem;
   margin-top: 100dvh;
 }
 @media screen and (min-width: 768px) {
   .p-year {
     padding-top: 25rem;
-    padding-bottom: 12.5rem;
+    padding-bottom: 25rem;
   }
 }
 
@@ -8701,21 +8802,186 @@ input::placeholder {
   }
 }
 
-.p-year__img {
+.p-year__right-wrapper {
+  max-width: 336px;
+  max-width: 21rem;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 24px;
   margin-top: 1.5rem;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
-  .p-year__img {
-    max-width: 43.75rem;
-    margin-top: 0;
-    margin-top: initial;
+  .p-year__right-wrapper {
+    max-width: 31.75rem;
+    margin-left: auto;
+    margin-top: -43.75rem;
   }
 }
 @media screen and (min-width: 1540px) {
-  .p-year__img {
+  .p-year__right-wrapper {
     max-width: 56.875rem;
+    margin-top: -62.5rem;
+  }
+}
+
+.p-year__right-wrapper::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/year_img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  aspect-ratio: 910/997;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-year__btn-img {
+  display: inline-block;
+}
+
+.p-year__btn-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.p-year__btn-img1 {
+  width: 64px;
+  width: 4rem;
+  position: absolute;
+  top: 60px;
+  top: 3.75rem;
+  left: 40px;
+  left: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-year__btn-img1 {
+    width: 7.5rem;
+    position: absolute;
+    top: 5rem;
+    left: 4.5rem;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-year__btn-img1 {
+    width: 11.25rem;
+    position: absolute;
+    top: 7.8125rem;
+    left: 14.375rem;
+  }
+}
+
+.p-year__btn-img2 {
+  width: 64px;
+  width: 4rem;
+  position: absolute;
+  top: 60px;
+  top: 3.75rem;
+  right: 40px;
+  right: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-year__btn-img2 {
+    position: absolute;
+    width: 7.5rem;
+    top: 5rem;
+    right: 4.5rem;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-year__btn-img2 {
+    width: 11.25rem;
+    top: 7.8125rem;
+    right: 14.375rem;
+  }
+}
+
+.p-year__btn-img3 {
+  width: 48px;
+  width: 3rem;
+  top: 220px;
+  top: 13.75rem;
+  left: 20px;
+  left: 1.25rem;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .p-year__btn-img3 {
+    width: 6.25rem;
+    position: absolute;
+    left: 3.75rem;
+    top: 22.5rem;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-year__btn-img3 {
+    width: 7.125rem;
+    left: 7.5rem;
+    top: 42.5rem;
+  }
+}
+
+.p-year__btn-img4 {
+  width: 80px;
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 240px;
+  top: 15rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .p-year__btn-img4 {
+    width: 9.375rem;
+    top: 23.75rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-year__btn-img4 {
+    width: 11.25rem;
+    top: 43.75rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.p-year__btn-img5 {
+  width: 48px;
+  width: 3rem;
+  top: 220px;
+  top: 13.75rem;
+  right: 20px;
+  right: 1.25rem;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .p-year__btn-img5 {
+    position: absolute;
+    width: 6.25rem;
+    top: 22.5rem;
+    right: 3.75rem;
+  }
+}
+@media screen and (min-width: 1540px) {
+  .p-year__btn-img5 {
+    width: 7.5rem;
+    top: 42.5rem;
+    right: 7.5rem;
   }
 }
 

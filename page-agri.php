@@ -115,6 +115,9 @@
             <figure class="p-introduce__img">
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/introduce_agri_img.png" alt="栽培作物" width="960" height="2160">
             </figure>
+            <figure class="p-introduce__img">
+              <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/introduce_agri_img_more.png" alt="栽培作物" width="960" height="2160">
+            </figure>
           </div>
         </div>
       </div>
