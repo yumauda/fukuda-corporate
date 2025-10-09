@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mq(md){
-   width: rem(64);
-   height: rem(64); 
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
   }
 }
 .p-drawer-icon.is-active {
@@ -60,6 +60,8 @@
   top: 0;
   width: rem(20);
   display: flex;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .p-drawer-icon__bar3 {
@@ -70,6 +72,8 @@
   display: flex;
   width: rem(20);
   top: rem(10);
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .p-drawer-content {
