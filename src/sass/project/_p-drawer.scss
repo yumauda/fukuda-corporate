@@ -54,18 +54,22 @@
 }
 .p-drawer-icon__bar1 {
   height: 2px;
+  position: absolute;
   background: #333;
   transition: 0.5s;
+  top: 0;
   width: rem(20);
   display: flex;
 }
 
 .p-drawer-icon__bar3 {
+  position: absolute;
   height: 2px;
   background: #333;
   transition: 0.5s;
   display: flex;
   width: rem(20);
+  top: rem(10);
 }
 
 .p-drawer-content {
