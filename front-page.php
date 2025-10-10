@@ -74,7 +74,6 @@
             <div class="swiper swiper1">
               <div class="swiper-wrapper">
                 <?php
-                // すべてのタームを取得（投稿があるタームのみ表示したいので hide_empty=1）
                 $terms = get_terms([
                   'taxonomy'   => 'engineer_category',
                   'hide_empty' => 1,
@@ -82,26 +81,20 @@
                   'order'      => 'ASC',
                 ]);
 
-                // 画像が無い場合のフォールバック
                 $fallback = get_template_directory_uri() . '/images/common/slider_1.jpg';
 
                 if (! is_wp_error($terms) && ! empty($terms)) :
                   foreach ($terms as $term) :
-                    // --- ACFの画像を取得（返り値：URL/ID/配列 どれでもOKに処理）
-                    // 推奨: ACF では $term をそのまま渡せます（互換で 'term_{id}' も試す）
                     $img = get_field('slider_img', $term);
                     if (! $img) $img = get_field('slider_img', 'term_' . $term->term_id);
 
                     $src = '';
                     if (is_array($img) && ! empty($img['url'])) {
-                      // 返り値=配列 の場合
                       $src = isset($img['sizes']['large']) ? $img['sizes']['large'] : $img['url'];
                     } elseif (is_numeric($img)) {
-                      // 返り値=ID の場合
                       $tmp = wp_get_attachment_image_src($img, 'large');
                       $src = $tmp ? $tmp[0] : '';
                     } elseif (is_string($img)) {
-                      // 返り値=URL の場合
                       $src = $img;
                     }
                     if (! $src) $src = $fallback;

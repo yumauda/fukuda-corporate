@@ -33,13 +33,28 @@
       </div>
     </div>
   </section>
-  <section class="p-page-mvImg">
+  <div class="p-page-mvImg">
     <div class="l-inner">
-      <figure class="p-page-mvImg__img">
+      <!-- <figure class="p-page-mvImg__img">
         <img src="<?php echo get_template_directory_uri() ?>/images/common/mv_sustainability.png" alt="私たちの取り組み" width="1700" height="500">
-      </figure>
+      </figure> -->
+      <div class="p-page-mv__anchor-wrapper">
+        <a href="#sdgs1" class="p-page-mv__anchor">
+          <img src="<?php echo get_template_directory_uri() ?>/images/common/sus_mv1.png" alt="" width="425" height="700">
+        </a>
+        <a href="#sdgs2" class="p-page-mv__anchor">
+          <img src="<?php echo get_template_directory_uri() ?>/images/common/sus_mv2.png" alt="" width="425" height="700">
+        </a>
+        <a href="#sdgs3" class="p-page-mv__anchor">
+          <img src="<?php echo get_template_directory_uri() ?>/images/common/sus_mv3.png" alt="" width="425" height="700">
+        </a>
+        <a href="#sdgs4" class="p-page-mv__anchor">
+          <img src="<?php echo get_template_directory_uri() ?>/images/common/sus_mv4.png" alt="" width="425" height="700">
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
   <section class="p-cycle" id="cycle">
     <div class="l-inner">
       <div class="p-cycle__content">
@@ -68,7 +83,7 @@
           </h2>
         </div>
         <div class="p-sdgs__block-wrapper">
-          <div class="p-sdgs__block">
+          <div class="p-sdgs__block" id="sdgs1">
             <div class="p-sdgs__detail">
               <p class="p-sdgs__detail-subTitle">インフラ整備</p>
               <h3 class="p-sdgs__detail-title">高い質のインフラと住まいの建設</h3>
@@ -86,7 +101,7 @@
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/sdgs_1.png" alt="" width="250" height="250">
             </figure>
           </div>
-          <div class="p-sdgs__block p-sdgs__block--2">
+          <div class="p-sdgs__block p-sdgs__block--2" id="sdgs2">
             <div class="p-sdgs__detail">
               <p class="p-sdgs__detail-subTitle">地域共創</p>
               <h3 class="p-sdgs__detail-title">地域の価値を高める</h3>
@@ -105,7 +120,7 @@
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/sdgs_2.png" alt="" width="250" height="250">
             </figure>
           </div>
-          <div class="p-sdgs__block p-sdgs__block--3">
+          <div class="p-sdgs__block p-sdgs__block--3" id="sdgs3">
             <div class="p-sdgs__detail">
               <p class="p-sdgs__detail-subTitle">地域共創</p>
               <h3 class="p-sdgs__detail-title">社員のより良い暮らしの追及</h3>
@@ -130,7 +145,7 @@
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/sdgs_3.png" alt="" width="250" height="250">
             </figure>
           </div>
-          <div class="p-sdgs__block p-sdgs__block--4">
+          <div class="p-sdgs__block p-sdgs__block--4" id="sdgs4">
             <div class="p-sdgs__detail">
               <p class="p-sdgs__detail-subTitle">地域共創</p>
               <h3 class="p-sdgs__detail-title">パートナーの企業や人々も大切に</h3>

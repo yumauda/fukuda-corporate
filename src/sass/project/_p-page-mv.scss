@@ -76,3 +76,20 @@
 .p-page-mv__link-text--white {
   color: #fff;
 }
+.p-page-mv__anchor-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.p-page-mv__anchor {
+  display: block;
+}
+.p-page-mv__anchor img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
